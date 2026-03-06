@@ -1,13 +1,12 @@
 html, body {
-    margin: 0;          
+    margin: 0;
     padding: 0;
-    height: 100%;       
-    width: 100%;
+    height: 100%;
 }
 
 body {
-    background-image: url("../Media/backgroundHOME.jpg"); 
-    background-size: cover;      
-    background-position: center;  
-    background-repeat: no-repeat; 
+    background-image: url("../Media/homebg.jpg");
+    background-size: cover;   /* width fills screen */
+    background-position: relative;
+    background-repeat: no-repeat;
 }
