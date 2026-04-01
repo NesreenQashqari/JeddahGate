@@ -1,0 +1,146 @@
+
+/* Container layout */
+.container {
+  display: flex;
+  flex-wrap: wrap; /* responsive */
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Main image/content on left */
+.detail-main {
+  flex: 2;
+  min-width: 300px;
+  margin-right: 20px;
+}
+
+/* Detail page main image */
+.detail-main img.detail-img {
+  width: 100%;           /* full width of the left panel */
+  height: 400px;     /* limit height */
+  object-fit: cover;     /* crop if necessary while keeping aspect ratio */
+  border-radius: 10px;   /* rounded corners */
+  margin-bottom: 20px;   /* spacing below the image */
+}
+
+/* Right info panel */
+.detail-info {
+  flex: 1;
+  width: 100%;           /* full width of the left panel */
+  height: 150px;     /* limit height */
+  background-color: #f5f5f5;
+  margin-top: 140px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
+}
+
+/* Headings and info inside panel */
+.detail-info h2 {
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: rgb(130, 67, 22);
+}
+
+.detail-info p {
+  margin: 5px 0;
+  line-height: 1.4;
+  color: #333;
+}
+
+.detail-info span.label {
+  font-weight: bold;
+  color: #555;
+}
+
+/* REVIEW FORM */
+.review-container {
+  flex: 1;
+  width: 100%;           /* full width of the left panel */
+  height: 200px;     /* limit height */
+  background-color: #f5f5f5;
+ margin-left: -19px;
+ margin-top: 35px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
+}
+
+.review-container h2 {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.star-rating {
+  display: flex;
+  justify-content: left;
+  flex-direction: row-reverse;
+  font-size: 25px;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.star-rating input:checked ~ label,
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: gold;
+}
+
+.review-container textarea {
+  width: 100%;
+  height: 80px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  box-sizing: border-box;
+}
+
+.review-container button {
+  width: 100%;
+  padding: 10px;
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 10px;
+  background: rgb(221, 212, 173);
+  border: none;
+  color: rgb(130, 67, 22);
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.review-container button:hover {
+  background:rgba(221, 212, 173, 0.601);
+}
+
+/* Back button */
+.btn-back {
+  display: inline-block;
+  padding: 10px 20px;
+   background: rgb(221, 212, 173);
+  color:rgb(130, 67, 22);
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin-bottom: 20px;
+}
+
+.btn-back:hover {
+  background-color:rgb(221, 212, 173);
+}

@@ -1,0 +1,72 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    min-height: 100vh;
+    display:relative;
+    align-items: center;
+    justify-content: center;
+
+
+    background: url("../Media/more bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+/* HEADER */
+header{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    
+}
+
+/* NAV CONTAINER */
+nav{
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 20px 20px;
+    
+    background-color: transparent;
+    backdrop-filter: blur(100px);
+    box-shadow: 0 0 30px   rgb(88, 87, 87);
+}
+
+/* UL */
+nav ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* NAV ITEMS */
+nav ul li a{
+    text-decoration: none;
+    
+    color: rgba(232,228,203,0.792);
+
+    font-size: 20px;
+    padding: 8px 18px;
+
+    border: 2px solid transparent;
+    border-radius: 20px;
+    
+
+    transition: 0.3s; /* find what is this about */
+}
+
+/* HOVER */
+nav ul li a:hover{
+    border: 2px solid transparent;
+    color: rgb(15, 113, 67);
+}

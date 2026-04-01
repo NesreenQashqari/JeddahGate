@@ -1,0 +1,213 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    min-height: 100vh;
+    display:relative;
+    align-items: center;
+    justify-content: center;
+
+
+    background: url("../Media/more bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+/* HEADER */
+header{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+
+    
+}
+
+/* NAV CONTAINER */
+nav{
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 20px 20px;
+    
+    background-color: transparent;
+    backdrop-filter: blur(100px);
+    box-shadow: 0 0 30px   rgb(88, 87, 87);
+}
+
+/* UL */
+nav ul{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* NAV ITEMS */
+nav ul li a{
+    text-decoration: none;
+    
+    color: rgba(232,228,203,0.792);
+
+    font-size: 20px;
+    padding: 8px 18px;
+
+    border: 2px solid transparent;
+    border-radius: 20px;
+    
+
+    transition: 0.3s; /* find what is this about */
+}
+
+/* HOVER */
+nav ul li a:hover{
+    border: 2px solid transparent;
+    color: rgb(15, 113, 67);
+}
+
+
+.main-title {
+
+margin-top: 20px;
+margin-bottom: 0%;
+margin-left: 100px;
+color: #ffffff;
+
+}
+/* Hide the radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Filters buttons styling */
+.filters label {
+  cursor: pointer;
+  padding: 6px 12px;
+  background: rgb(221, 212, 173);
+  color:rgb(130, 67, 22);
+  border-radius: 5px;
+ margin-right: -50px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  display: inline-block;
+  border: 1px solid;
+}
+
+input[type="radio"]:checked + label {
+  background: #7a1fa2;
+  color: white;
+  border-color: #7a1fa2;
+}
+
+/* Cards container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 40px 0 0 100px;
+}
+
+/* Individual card */
+.card {
+  display: flex; /* visible by default */
+  flex-direction: column;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effect */
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* Image */
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Info section */
+.card-info {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* Heading */
+.card-info h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+/* Subheading */
+.card-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: #777;
+  font-weight: normal;
+}
+
+/* Row: paragraph + button */
+.card-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+}
+
+/* Paragraph */
+.card-row p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #555;
+  flex: 1;
+  padding-right: 10px;
+}
+
+/* Button */
+.card-row button {
+  padding: 8px 15px;
+  border: none;
+  background: rgb(221, 212, 173);
+  color:rgb(130, 67, 22);
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.3s;
+}
+
+.card-row button:hover {
+  background-color: rgba(221, 212, 173, 0.593);
+}
+
+/* Hide all cards initially (for CSS filtering) */
+.cards .card {
+  display: none;
+}
+
+/* Show all cards when "All" is checked */
+#all:checked ~ .cards .card {
+  display: flex;
+}
+
+/* Show only specific categories */
+#accommodations:checked ~ .cards .accommodations { display: flex; }
+#culture:checked ~ .cards .culture { display: flex; }
+#restaurants:checked ~ .cards .restaurants { display: flex; }
+#nature:checked ~ .cards .nature { display: flex; }
+#shopping:checked ~ .cards .shopping { display: flex; }
