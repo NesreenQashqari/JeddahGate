@@ -16,8 +16,8 @@ body{
 
     background: url("../Media/more bg.jpg");
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 
 }
 /* HEADER */
