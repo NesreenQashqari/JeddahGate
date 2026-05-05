@@ -1,32 +1,31 @@
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
+    text-decoration: none !important; /* Force remove all underlines */
     list-style: none;
     font-family: 'Times New Roman', Times, serif;
 }
 
-body{
+body {
     min-height: 100vh;
-    display:relative;
-    align-items: center;
-    justify-content: center;
-
-
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: flex-start;
     background: url("../Media/albald.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
+    overflow-x: hidden;
 }
-/* HEADER */
-header{
+
+header {
     display: flex;
     justify-content: center;
     margin-top: 40px;
-
-    
+    width: 100%;
 }
 
 /* NAV CONTAINER */
@@ -34,10 +33,9 @@ nav{
     border: 2px solid transparent;
     border-radius: 15px;
     padding: 20px 20px;
-    
     background-color: transparent;
     backdrop-filter: blur(100px);
-    box-shadow: 0 0 30px   rgb(88, 87, 87);
+    box-shadow: 0 0 30px rgb(88, 87, 87);
 }
 
 /* UL */
@@ -47,21 +45,18 @@ nav ul{
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-wrap: wrap; /* this was edited for responsiveness */
+    justify-content: center; /* this was edited for responsiveness */
 }
 
 /* NAV ITEMS */
 nav ul li a{
-    text-decoration: none;
-    
+    text-decoration: none; /* unchanged */
     color: rgba(232,228,203,0.792);
-
     font-size: 20px;
     padding: 8px 18px;
-
     border: 2px solid transparent;
     border-radius: 20px;
-    
-
     transition: 0.3s; /* find what is this about */
 }
 
@@ -69,71 +64,54 @@ nav ul li a{
 nav ul li a:hover{
     border: 2px solid transparent;
     color: rgb(15, 113, 67);
+    text-decoration: none !important; /* this was edited for responsiveness */
 }
-
-
-
-/* CONTACT US */
-.container{
-    width:70%;
+.container {
+    width: 70%;
+    max-width: 800px; /* Prevents stretching too wide */
     background: rgba(232, 228, 203, 0.792); 
-
     border-radius: 2rem;
     padding: 30px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    margin-top: 20px;
+    margin: 40px auto;
+    box-sizing: border-box; /* IMPORTANT: Keeps padding inside the width */
 }
 
-.content{
-    display:flex;
+.content {
+    display: flex;
     justify-content: space-between;
     gap: 40px;
 }
 
-/* LEFT */
-.left-side{
+.left-side {
     width: 70%;
 }
 
-.left-side .topic-text{
+.left-side .topic-text {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
-.input-box{
+.input-box {
     margin: 10px 0;
 }
 
 .input-box input,
-.input-box textarea{
+.input-box textarea {
     width: 100%;
-    padding: 8px;
-    border-radius: 8px ;
-    border: 1px transparent;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box; 
 }
 
-/* RIGHT */
-.right-side{
+.right-side {
     width: 30%;
     text-align: center;
-    margin-top: 180px;
+    margin-top: 100px;
 }
 
-.right-side .details{
-    margin-bottom: 20px;
-    text-decoration: none;
-    list-style: none;
-
-}
-
-.right-side i{
-    font-size: 28px;
-    color: rgb(31, 108, 45);
-    
-}
-
-
-input[type="submit"]{
+input[type="submit"] {
     background-color: rgb(221, 212, 173);
     color: rgb(130, 67, 22);
     font-size: 20px;
@@ -144,17 +122,67 @@ input[type="submit"]{
     transition: 0.3s;
 }
 
-input[type="submit"]:hover{
-    color: rgb(23, 132, 47);
-}
-
-
 .details a {
-    text-decoration: none;   /* removes underline */
-    color:inherit ;          /* keeps your original text color */
+    text-decoration: none !important;
+    color: inherit;
 }
 
-.details a:hover {
-    color: rgb(15, 113, 67); /* your theme color */
-    transition: 0.3s;
+/* --- MEDIA QUERIES --- */
+
+@media (max-width: 922px) {
+    .container {
+        width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+    .left-side, .right-side {
+        width: 100%;
+    }
+    .right-side {
+        margin-top: 30px;
+    }
+}
+@media (max-width: 576px) {
+    
+    nav {
+        padding: 10px 5px !important; /* smol padding */
+        max-width: 95vw !important;
+        margin-bottom: 20px !important;
+    }
+
+    
+    nav ul {
+        gap: 8px !important; 
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
+
+    nav ul li a {
+        font-size: 15px !important;
+        padding: 20px 20px !important;
+    }
+
+    /* container edited */
+    .container {
+        width: 92% !important;
+        padding: 15px !important;
+        margin-top: 10px !important;
+    }
+
+    
+    .left-side .topic-text {
+        font-size: 18px !important;
+    }
+
+    input[type="submit"] {
+        width: 100%; 
+    }
+header{
+    margin-top: 25px;
+
+}
 }

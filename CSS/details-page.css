@@ -11,27 +11,27 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-/* Main image/content on left */
+
 .detail-main {
   flex: 2;
   min-width: 300px;
   margin-right: 20px;
 }
 
-/* Detail page main image */
+/* detila page main image */
 .detail-main img.detail-img {
-  width: 100%;           /* full width of the left panel */
-  height: 400px;     /* limit height */
-  object-fit: cover;     /* crop if necessary while keeping aspect ratio */
-  border-radius: 10px;   /* rounded corners */
-  margin-bottom: 20px;   /* spacing below the image */
+  width: 100%;           
+  height: 400px;     
+  object-fit: cover;    
+  border-radius: 10px; 
+  margin-bottom: 20px;  
 }
 
-/* Right info panel */
+/* right panel info panel */
 .detail-info {
   flex: 1;
-  width: 100%;           /* full width of the left panel */
-  height: 150px;     /* limit height */
+  width: 100%;          
+  height: 150px;    
   background-color: #f5f5f5;
   margin-top: 140px;
   padding: 20px;
@@ -39,7 +39,7 @@
   box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
 }
 
-/* Headings and info inside panel */
+/* heaidngs and info  */
 .detail-info h2 {
   margin-top: 0;
   margin-bottom: 15px;
@@ -57,11 +57,11 @@
   color: #555;
 }
 
-/* REVIEW FORM */
+/* review form */
 .review-container {
   flex: 1;
-  width: 100%;           /* full width of the left panel */
-  height: 200px;     /* limit height */
+  width: 100%;         
+  height: 200px;    
   background-color: #f5f5f5;
  margin-left: -19px;
  margin-top: 35px;
@@ -128,7 +128,7 @@
   background:rgba(221, 212, 173, 0.601);
 }
 
-/* Back button */
+/* back */
 .btn-back {
   display: inline-block;
   padding: 10px 20px;
