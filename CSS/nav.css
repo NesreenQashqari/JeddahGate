@@ -1,0 +1,79 @@
+/* ===== SHARED NAV STYLES ===== */
+/* Link this file in every HTML page:
+   <link rel="stylesheet" href="../CSS/nav.css">
+   Make sure it comes AFTER bootstrap (if used) and BEFORE your page-specific CSS */
+
+header {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    width: 100%;
+}
+
+nav {
+    border: 2px solid transparent;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: transparent;
+    backdrop-filter: blur(100px);
+    box-shadow: 0 0 30px rgb(88, 87, 87);
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgba(232, 228, 203, 0.792);
+    font-size: 20px;
+    padding: 8px 18px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: rgb(15, 113, 67);
+    text-decoration: none !important;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+@media (max-width: 768px) {
+    nav {
+        padding: 15px 10px;
+        max-width: 95vw;
+    }
+
+    nav ul {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        margin-top: 25px;
+    }
+
+    nav {
+        padding: 10px 5px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    nav ul li a {
+        font-size: 17px;
+        padding: 8px 14px;
+    }
+}

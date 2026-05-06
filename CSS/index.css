@@ -20,44 +20,6 @@ body{
     background-attachment: fixed;
 }
 
-/* HEADER */
-header{
-    display: flex;
-    justify-content: center;
-    margin-top: 40px;
-}
-
-nav{
-    border: 2px solid transparent;
-    border-radius: 15px;
-    padding: 20px 20px;
-    background-color: transparent;
-    backdrop-filter: blur(100px);
-    box-shadow: 0 0 30px rgb(88, 87, 87);
-}
-
-nav ul{
-    display: flex;
-    gap: 40px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-nav ul li a{
-    text-decoration: none;
-    color: rgba(232,228,203,0.792);
-    font-size: 20px;
-    padding: 8px 18px;
-    border: 2px solid transparent;
-    border-radius: 20px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover{
-    border: 2px solid transparent;
-    color: rgb(15, 113, 67);
-    text-decoration: none !important;
-}
 
 p{
     color: rgba(232, 228, 203, 0.792);
@@ -169,16 +131,7 @@ footer{
 
 /* MEDIA QUERIES */
 @media (max-width: 576px){
-    nav ul{
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-
-    nav ul li a{
-        font-size: 18px;
-    }
-
+   
     .values-box{
         flex-direction: column;
         gap: 20px;
