@@ -1,7 +1,3 @@
-/* ===== SHARED NAV STYLES ===== */
-/* Link this file in every HTML page:
-   <link rel="stylesheet" href="../CSS/nav.css">
-   Make sure it comes AFTER bootstrap (if used) and BEFORE your page-specific CSS */
 
 header {
     display: flex;
