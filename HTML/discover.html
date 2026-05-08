@@ -1,14 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Discover</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../CSS/discover.css">
     <link rel="stylesheet" href="../CSS/nav.css">
 </head>
+
 <body>
-  
+
 <header>
     <nav>
         <ul>
@@ -21,193 +25,184 @@
 </header>
 
 <h1 class="main-title">What's On</h1>
-<!-- Radio buttons (hidden) -->
-<input type="radio" name="category" id="all" checked>
-<input type="radio" name="category" id="accommodations">
-<input type="radio" name="category" id="culture">
-<input type="radio" name="category" id="restaurants">
-<input type="radio" name="category" id="nature">
-<input type="radio" name="category" id="shopping">
 
-<!-- Filters -->
+<!-- Filter buttons -->
 <div class="filters">
-  <label for="all">All Categories</label>
-  <label for="accommodations">Accommodations</label>
-  <label for="culture">Culture & History</label>
-  <label for="restaurants">Restaurants</label>
-  <label for="nature">Nature</label>
-  <label for="shopping">Shopping</label>
+  <button class="filter-btn active" data-filter="all">All Categories</button>
+  <button class="filter-btn" data-filter="accommodations">Accommodations</button>
+  <button class="filter-btn" data-filter="culture">Culture & History</button>
+  <button class="filter-btn" data-filter="restaurants">Restaurants</button>
+  <button class="filter-btn" data-filter="nature">Nature</button>
+  <button class="filter-btn" data-filter="shopping">Shopping</button>
 </div>
 
 <!-- Cards container -->
-<div class="cards card-container">
+<div class="card-container">
 
-   <!-- ACCOMODATIONS CARDS START -->
+  <!-- ACCOMMODATIONS -->
   <div class="card accommodations">
-    <img src="../media/ritz-hotel.jpg" alt="ritz">
+    <div class="card-image">
+      <img src="../media/ritz-hotel.jpg" alt="Ritz Carlton">
+      <a href="ritz.html" class="card-overlay"><span>More Info</span></a>
+    </div>
     <div class="card-info">
+      <span class="category-badge">Accommodations</span>
       <h2>The Ritz-Carlton</h2>
-      <h3>Accomodations</h3>
-      <div class="card-row">
-        <p>Relax in luxury with stunning Red Sea views.</p>
-        <a href="ritz.html" class="btn">More Info</a>
-      </div>
+      <p>Relax in luxury with stunning Red Sea views.</p>
     </div>
   </div>
 
   <div class="card accommodations">
-    <img src="../media/rixos-hotel.jpg" alt="ritz">
+    <div class="card-image">
+      <img src="../media/rixos-hotel.jpg" alt="Rixos Obhur">
+      <a href="rixos.html" class="card-overlay"><span>More Info</span></a>
+    </div>
     <div class="card-info">
+      <span class="category-badge">Accommodations</span>
       <h2>Rixos Obhur</h2>
-      <h3>Accomodations</h3>
-      <div class="card-row">
-        <p>Discover a world of luxury, relaxation, and impeccable service at Rixos Hotel.</p>
-        <a href="rixos.html" class="btn">More Info</a>
-      </div>
+      <p>Discover a world of luxury, relaxation, and impeccable service at Rixos Hotel.</p>
     </div>
   </div>
 
   <div class="card accommodations">
-    <img src="../media/parkhyatt-hotel.jpg" alt="ritz">
+    <div class="card-image">
+      <img src="../media/parkhyatt-hotel.jpg" alt="Park Hyatt">
+      <a href="parkhyatt.html" class="card-overlay"><span>More Info</span></a>
+    </div>
     <div class="card-info">
+      <span class="category-badge">Accommodations</span>
       <h2>Park Hyatt</h2>
-      <h3>Accomodations</h3>
-      <div class="card-row">
-        <p>Indulge in world-class amenities, gourmet dining, and serene marina vistas at Park Hyatt Jeddah.</p>
-        <a href="parkhyatt.html" class="btn">More Info</a>
-      </div>
+      <p>Indulge in world-class amenities, gourmet dining, and serene marina vistas.</p>
     </div>
   </div>
-     <!-- ACCOMODATIONS CARDS END -->
 
-     <!-- RESTAURANTS CARDS START -->
+  <!-- RESTAURANTS -->
   <div class="card restaurants">
-    <img src="../media/blueocean-restaurant.jpg" alt="ritz">
+    <div class="card-image">
+      <img src="../media/blueocean-restaurant.jpg" alt="Blue Ocean">
+      <a href="blueocean.html" class="card-overlay"><span>More Info</span></a>
+    </div>
     <div class="card-info">
+      <span class="category-badge">Restaurants</span>
       <h2>Blue Ocean</h2>
-      <h3>Restaurants</h3>
-      <div class="card-row">
-        <p>Indulge in a culinary journey with stunning sea views and fresh flavors.</p>
-        <a href="blueocean.html" class="btn">More Info</a>
-      </div>
+      <p>Indulge in a culinary journey with stunning sea views and fresh flavors.</p>
     </div>
   </div>
 
   <div class="card restaurants">
-    <img src="../media/hakans-restaurants.jpg" alt="ritz">
+    <div class="card-image">
+      <img src="../media/hakans-restaurants.jpg" alt="Mr Hakans">
+      <a href="hakans.html" class="card-overlay"><span>More Info</span></a>
+    </div>
     <div class="card-info">
+      <span class="category-badge">Restaurants</span>
       <h2>Mr. Hakans</h2>
-      <h3>Restaurants</h3>
-      <div class="card-row">
-        <p>Enjoy great food and a cozy vibe at Mr Hakans, perfect for family or friends.</p>
-        <a href="hakans.html" class="btn">More Info</a>
-      </div>
+      <p>Enjoy great food and a cozy vibe at Mr Hakans, perfect for family or friends.</p>
     </div>
   </div>
-      <!-- RESTAURANTS CARDS END -->
 
-      <!-- CULTURE CARDS START -->
+  <!-- CULTURE -->
   <div class="card culture">
-    <img src="../media/albalad-culture.webp" alt="Al Balad">
+    <div class="card-image">
+      <img src="../media/albalad-culture.webp" alt="Al Balad">
+      <a href="albalad.html" class="card-overlay"><span>More Info</span></a>
+    </div>
     <div class="card-info">
+      <span class="category-badge">Culture & History</span>
       <h2>Al Balad</h2>
-      <h3>Culture & History</h3>
-      <div class="card-row">
-        <p>Experience the vibrant culture and heritage of this iconic area.</p>
-        <a href="albalad.html" class="btn">More Info</a>
-      </div>
+      <p>Experience the vibrant culture and heritage of this iconic area.</p>
     </div>
   </div>
 
   <div class="card culture">
-    <img src="../media/islamicart-culture.webp" alt="Al Balad">
+    <div class="card-image">
+      <img src="../media/islamicart-culture.webp" alt="Islamic Art">
+      <a href="islamicart.html" class="card-overlay"><span>More Info</span></a>
+    </div>
     <div class="card-info">
-      <h2>The House of Islamic Art </h2>
-      <h3>Culture & History</h3>
-      <div class="card-row">
-        <p>Explore the spiritual heritage of Islam through art and historical artifacts at The House of Islamic Art.</p>
-        <a href="islamicart.html" class="btn">More Info</a>
-      </div>
+      <span class="category-badge">Culture & History</span>
+      <h2>The House of Islamic Art</h2>
+      <p>Explore the spiritual heritage of Islam through art and artifacts.</p>
     </div>
   </div>
 
   <div class="card culture">
-    <img src="../media/biennale-culture.jpg" alt="Al Balad">
+    <div class="card-image">
+      <img src="../media/biennale-culture.jpg" alt="Biennale">
+      <a href="biennale.html" class="card-overlay"><span>More Info</span></a>
+    </div>
     <div class="card-info">
-      <h2>Gallery of Islamic Arts Biennale </h2>
-      <h3>Culture & History</h3>
-      <div class="card-row">
-        <p>Immerse yourself in centuries of Islamic artistic traditions at the Gallery of Islamic Arts Biennale.</p>
-        <a href="biennale.html" class="btn">More Info</a>
-      </div>
+      <span class="category-badge">Culture & History</span>
+      <h2>Gallery of Islamic Arts Biennale</h2>
+      <p>Immerse yourself in centuries of Islamic artistic traditions.</p>
     </div>
   </div>
-      <!-- CULTURE CARDS END -->
 
-       <!-- NATURE CARDS START -->
+  <!-- NATURE -->
   <div class="card nature">
-    <img src="../media/majedpark-nature.webp" alt="Majid Park">
+    <div class="card-image">
+      <img src="../media/majedpark-nature.webp" alt="Prince Majed Park">
+      <a href="pmajedpark.html" class="card-overlay"><span>More Info</span></a>
+    </div>
     <div class="card-info">
+      <span class="category-badge">Nature</span>
       <h2>Prince Majed Park</h2>
-      <h3>Nature</h3>
-      <div class="card-row">
-        <p>Spend quality time outdoors at Prince Majed Park, perfect for families and nature lovers.</p>
-        <a href="pmajedpark.html" class="btn">More Info</a>
-      </div>
+      <p>Spend quality time outdoors with family and nature.</p>
     </div>
   </div>
 
   <div class="card nature">
-    <img src="../media/aquarium-nature.webp" alt="aquarium">
+    <div class="card-image">
+      <img src="../media/aquarium-nature.webp" alt="Fakeih Aquarium">
+      <a href="aquarium.html" class="card-overlay"><span>More Info</span></a>
+    </div>
     <div class="card-info">
+      <span class="category-badge">Nature</span>
       <h2>Fakeih Aquarium</h2>
-      <h3>Nature</h3>
-      <div class="card-row">
-        <p>Explore the wonders of the sea at Fakeih Aquarium, home to vibrant marine life and interactive exhibits.</p>
-        <a href="aquarium.html" class="btn">More Info</a>
-      </div>
+      <p>Explore vibrant marine life and underwater wonders.</p>
     </div>
   </div>
 
   <div class="card nature">
-    <img src="../media/bayada-nature.jpg" alt="Majid Park">
-    <div class="card-info">
-      <h2>Bayada Leisure Boat Trip with Snorkeling</h2>
-      <h3>Nature</h3>
-      <div class="card-row">
-        <p>Set sail on the Red Sea with Bayada Leisure, enjoy stunning views, and dive into vibrant underwater life while snorkeling.</p>
-        <a href="bayada.html" class="btn">More Info</a>
-      </div>
+    <div class="card-image">
+      <img src="../media/bayada-nature.jpg" alt="Bayada Trip">
+      <a href="bayada.html" class="card-overlay"><span>More Info</span></a>
     </div>
-  </div>
-      <!-- NATURE CARDS END -->
-
-      <!-- SHOPPING CARDS START -->
-  <div class="card shopping">
-    <img src="../media/mallarabia-shopping.jpg" alt="ritz">
     <div class="card-info">
-      <h2>Mall Of Arabia</h2>
-      <h3>Shopping</h3>
-      <div class="card-row">
-        <p>Shop, dine, and unwind at Mall of Arabia, Jeddah’s premier shopping destination.</p>
-        <a href="mallofarabia.html" class="btn">More Info</a>
-      </div>
+      <span class="category-badge">Nature</span>
+      <h2>Bayada Boat Trip</h2>
+      <p>Snorkel and explore the Red Sea’s beautiful waters.</p>
     </div>
   </div>
 
+  <!-- SHOPPING -->
   <div class="card shopping">
-    <img src="../media/jeddahpark-shopping.jpg" alt="ritz">
+    <div class="card-image">
+      <img src="../media/mallarabia-shopping.jpg" alt="Mall of Arabia">
+      <a href="mallofarabia.html" class="card-overlay"><span>More Info</span></a>
+    </div>
     <div class="card-info">
+      <span class="category-badge">Shopping</span>
+      <h2>Mall of Arabia</h2>
+      <p>Shop, dine, and unwind at Jeddah's premier mall.</p>
+    </div>
+  </div>
+
+  <div class="card shopping">
+    <div class="card-image">
+      <img src="../media/jeddahpark-shopping.jpg" alt="Jeddah Park">
+      <a href="jeddahpark.html" class="card-overlay"><span>More Info</span></a>
+    </div>
+    <div class="card-info">
+      <span class="category-badge">Shopping</span>
       <h2>Jeddah Park</h2>
-      <h3>Shopping</h3>
-      <div class="card-row">
-        <p>Your go-to spot for shopping, food, and entertainment</p>
-        <a href="jeddahpark.html" class="btn">More Info</a>
-      </div>
+      <p>Your go-to spot for shopping, food, and entertainment.</p>
     </div>
   </div>
-        <!-- SHOPPING CARDS END -->
 
 </div>
+
+<script src="../JS/discover.js"></script>
+
 </body>
 </html>
