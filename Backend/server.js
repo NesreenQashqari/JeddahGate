@@ -92,6 +92,13 @@ app.post('/review', (req, res) => {
     });
 });
 
+app.get('/reviews', (req, res) => {
+    db.query('SELECT * FROM reviews ORDER BY created_at DESC', (err, results) => {
+        if (err) return res.json({ success: false, message: 'Database error' });
+        res.json({ success: true, reviews: results });
+    });
+});
+
 app.listen(4000, () => {
     console.log('Server running on port 4000');
 });
