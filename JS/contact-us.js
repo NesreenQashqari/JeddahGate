@@ -93,30 +93,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function validateDob() {
-        const value = dobInput.value;
+    const value = dobInput.value;
 
-        if (!value) {
-            showError("dobError", "Date of birth is required");
-            return false;
-        }
-
-        const dob = new Date(value);
-        const today = new Date();
-        const age = today.getFullYear() - dob.getFullYear();
-
-        if (dob > today) {
-            showError("dobError", "Date cannot be in the future");
-            return false;
-        }
-        if (age > 120) {
-            showError("dobError", "Please enter a valid date of birth");
-            return false;
-        }
-
-        clearError("dobError");
-        return true;
+    if (!value) {
+        showError("dobError", "Date of birth is required");
+        return false;
     }
 
+    const dob = new Date(value);
+    const today = new Date();
+    const age = today.getFullYear() - dob.getFullYear();
+    const monthDiff = today.getMonth() - dob.getMonth();
+    const actualAge = monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate()) ? age - 1 : age;
+
+    if (dob > today) {
+        showError("dobError", "Date cannot be in the future");
+        return false;
+    }
+    if (actualAge < 13) {
+        showError("dobError", "You must be at least 13 years old");
+        return false;
+    }
+    if (actualAge > 120) {
+        showError("dobError", "Please enter a valid date of birth");
+        return false;
+    }
+
+    clearError("dobError");
+    return true;
+}
     function validateEmail() {
         const value = email.value.trim();
 

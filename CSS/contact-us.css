@@ -58,7 +58,12 @@ body {
     border: 1px solid #ccc;
     box-sizing: border-box; 
 }
-
+.input-box label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 16px;
+}
 .right-side {
     width: 30%;
     text-align: center;
@@ -66,7 +71,10 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color:rgb(74, 53, 21);
+    font-size: larger;
 }
+
 
 input[type="submit"] {
     background-color: rgb(221, 212, 173);
@@ -89,6 +97,10 @@ input[type="submit"]:hover {
     color: inherit;
 }
 
+.details a:hover .text-one {
+    color: rgb(12, 156, 77);
+    transition: color 0.3s;
+}
 
 
 /* WEBSITE REVIEW FORM */
@@ -98,15 +110,14 @@ input[type="submit"]:hover {
     border-radius: 2rem;
     padding: 30px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
-    margin-top: 5px;
-    .review-section {
-    flex: 0 0 300px;
-}
+    margin: 20px auto;
+    width: 70%;
+    max-width: 800px;
 }
 
 .review-section h2 {
     margin-bottom: 10px;
-    color: rgb(130, 67, 22);
+    color: rgb(74, 53, 21);
     text-align: left;
 }
 
@@ -144,7 +155,7 @@ input[type="submit"]:hover {
     border-radius: 5px;
     resize: none;
     box-sizing: border-box;
-    
+    outline: none;
 }
 
 .review-section button {
@@ -174,10 +185,9 @@ input[type="submit"]:hover {
     justify-content: center;
 }
 
-/* trying to stop the  buttun from moving */
-#websiteReviewSuccess {
+#websiteReviewTextError {
     display: block;
-    margin-top: 10px;
+    margin-bottom: 8px;
 }
 
 /* --- MEDIA QUERIES --- */
@@ -238,4 +248,28 @@ header{
     margin-top: 25px;
 
 }
+}
+
+
+@media (max-width: 768px) {
+    .left-forms {
+        flex-direction: column;
+    }
+
+    .review-section {
+        flex: 1;
+        width: 100%;
+        max-width: 85%;
+    }
+}
+
+@media (max-width: 576px) {
+    .review-section textarea {
+        height: 60px;
+    }
+
+    .review-section button {
+        font-size: 16px;
+        padding: 8px 14px;
+    }
 }
