@@ -1,3 +1,10 @@
+body {
+    min-height: 100vh;
+    background: url("../Media/more bg.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 /* CONTAINER LAYOUT */
 .container {
     display: flex;
@@ -5,7 +12,7 @@
     max-width: 1200px;
     margin: 40px auto;
     padding: 20px;
-    background-color: white;
+    background-color: rgb(241, 229, 199);
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -130,15 +137,15 @@
  
 /* BACK BUTTON */
 .btn-back {
-    display: inline-block;
-    padding: 10px 20px;
-    background: rgb(221, 212, 173);
+    background-color: rgb(221, 212, 173);
     color: rgb(130, 67, 22);
-    border-radius: 5px;
+    font-size: 20px;
+    padding: 8px 18px;
+    border: 2px solid rgb(130, 67, 22);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
     text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s;
-    margin-bottom: 20px;
 }
  
 .btn-back:hover {
@@ -167,3 +174,102 @@
     }
 }
  
+.place-reviews-section {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.place-reviews-section h2 {
+    font-family: 'Times New Roman', serif;
+    font-size: 28px;
+    color: rgba(232, 228, 203, 0.9);
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.carousel-outer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+.carousel-btn {
+    background: rgba(232, 228, 203, 0.9);
+    border: 1px solid rgba(200, 169, 110, 0.3);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    flex-shrink: 0;
+    color: #f2a60eb1;
+    font-size: 18px;
+    transition: background 0.2s;
+}
+
+.carousel-btn:hover {
+    background: rgba(86, 65, 39, 0.9);
+}
+
+.carousel-track {
+    overflow: hidden;
+    flex: 1;
+    width: 100%;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.rev-card {
+    padding: 32px 36px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(251, 233, 200, 0.496);
+    border-radius: 16px;
+    box-sizing: border-box;
+    text-align: left;
+    flex-shrink: 0;
+    backdrop-filter: blur(10px);
+}
+
+.rev-stars {
+    color: #c8a96e;
+    font-size: 18px;
+    letter-spacing: 3px;
+    margin-bottom: 16px;
+}
+
+.rev-quote {
+    font-family: 'Times New Roman', serif;
+    font-size: 26px;
+    color: rgba(232, 228, 203, 0.9);
+    line-height: 1.7;
+    font-style: italic;
+}
+
+.dots {
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: rgba(232, 228, 203, 0.9);
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.dot.active {
+    background: #c8a96e;
+}

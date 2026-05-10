@@ -30,8 +30,9 @@
 <!-- Container -->
 <div class="container">
     <div class="content">
+        <div class="left-forms">
 
-        <!-- left side of the form -->
+             <!-- left side of the form -->
         <div class="left-side">
             <div class="topic-text"><strong>Send us a message!</strong></div>
             <p>If you have any questions regarding any spots, feel free to message us</p>
@@ -98,6 +99,8 @@
             </form>
         </div>
 
+    </div>
+       
         <!-- right side of the form -->
         <div class="right-side">
 
@@ -129,6 +132,37 @@
 
     </div>
 </div>
+
+
+
+        <div class="review-section">
+    <h2>Review Our Website</h2>
+    <form id="websiteReviewForm">
+        <div class="star-rating">
+            <input type="radio" name="websiteRating" id="wstar5" value="5">
+            <label for="wstar5">&#9733;</label>
+            <input type="radio" name="websiteRating" id="wstar4" value="4">
+            <label for="wstar4">&#9733;</label>
+            <input type="radio" name="websiteRating" id="wstar3" value="3">
+            <label for="wstar3">&#9733;</label>
+            <input type="radio" name="websiteRating" id="wstar2" value="2">
+            <label for="wstar2">&#9733;</label>
+            <input type="radio" name="websiteRating" id="wstar1" value="1">
+            <label for="wstar1">&#9733;</label>
+        </div>
+        <small class="error" id="websiteRatingError"></small>
+
+        <textarea id="websiteReviewText" placeholder="Share your experience with us..." required minlength="10" maxlength="300"></textarea>
+        <small class="error" id="websiteReviewTextError"></small>
+
+        <div id="websiteReviewSuccess" style="display:none;">
+            <p>&#10003; Review submitted successfully!</p>
+        </div>
+
+        <button type="submit">Submit Review</button>
+    </form>
+</div>
+
 
 <script src="../JS/contact-us.js"></script>
 

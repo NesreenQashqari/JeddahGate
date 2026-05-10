@@ -39,9 +39,8 @@ body {
 }
 
 .left-side {
-    width: 70%;
+    flex: 1;
 }
-
 .left-side .topic-text {
     font-size: 24px;
     margin-bottom: 10px;
@@ -63,7 +62,10 @@ body {
 .right-side {
     width: 30%;
     text-align: center;
-    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 input[type="submit"] {
@@ -77,11 +79,95 @@ input[type="submit"] {
     transition: 0.3s;
 }
 
+input[type="submit"]:hover {
+    background-color: rgb(200, 190, 148);
+    color: rgb(130, 67, 22);
+}
+
 .details a {
     text-decoration: none !important;
     color: inherit;
 }
 
+
+
+/* WEBSITE REVIEW FORM */
+.review-section {
+    background: rgba(232, 228, 203, 0.792);
+    border-radius: 2rem;
+    padding: 30px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    margin-top: 5px;
+    .review-section {
+    flex: 0 0 300px;
+}
+}
+
+.review-section h2 {
+    margin-bottom: 10px;
+    color: rgb(130, 67, 22);
+    text-align: left;
+}
+
+.review-section .star-rating {
+    display: flex;
+    justify-content: left;
+    flex-direction: row-reverse;
+    font-size: 25px;
+}
+
+.review-section .star-rating input {
+    display: none;
+}
+
+.review-section .star-rating label {
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.review-section .star-rating input:checked ~ label,
+.review-section .star-rating label:hover,
+.review-section .star-rating label:hover ~ label {
+    color: gold;
+}
+
+.review-section textarea {
+    width: 100%;
+    height: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
+    box-sizing: border-box;
+}
+
+.review-section button {
+    background-color: rgb(221, 212, 173);
+    color: rgb(130, 67, 22);
+    font-size: 20px;
+    padding: 8px 18px;
+    border: 2px solid rgb(130, 67, 22);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 10px;
+}
+
+.review-section button:hover {
+    background: rgb(200, 190, 148);
+}
+
+
+.forms-row {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    flex: 1;
+    justify-content: center;
+}
 /* --- MEDIA QUERIES --- */
 
 @media (max-width: 922px) {

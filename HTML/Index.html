@@ -9,6 +9,8 @@
 <link rel="stylesheet" href="../CSS/nav.css">
 </head>
 
+<script src="../JS/index.js"></script>
+
 <body>
  
 <header>
@@ -58,51 +60,18 @@
         </p>
     </div>
 </section>
-
 <section class="rev-section">
-   
     <h2 class="rev-title">Our Guests Love Us</h2>
-    <p class="note">
-        Here are some of the reviews from our guests who have experienced the best of Jeddah through our platform. We are grateful for their feedback and support, and we look forward to welcoming you to Jeddah soon!
-    </p>
+    <p class="note">Real experiences from visitors who explored Jeddah with us</p>
 
-    <div class="reviews">
-        <div class="review">
-            <div class="head-review">
-                <img src="../Media/review1.jpg" width="120" alt="Guest 1">
-            </div>
-            <div class="rating">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-            </div>
-            <div class="desc-review">Amazing experience!</div>
+    <div class="carousel-outer">
+        <button class="carousel-btn" id="prevBtn">&#8592;</button>
+        <div class="carousel-track">
+            <div class="carousel-inner" id="carouselTrack"></div>
         </div>
-
-        <div class="review">
-            <div class="head-review">
-                <img src="../Media/review2.jpg" width="120" alt="Guest 2">
-            </div>
-            <div class="rating">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-            </div>
-            <div class="desc-review">Grateful for the accurate information provided</div>
-        </div>
-
-        <div class="review">
-            <div class="head-review">
-                <img src="../Media/review1.jpg" width="120" alt="Guest 3">
-            </div>
-            <div class="rating">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-            </div>
-            <div class="desc-review">Would definitely recommend it to everyone!</div>
-        </div>
+        <button class="carousel-btn" id="nextBtn">&#8594;</button>
     </div>
+    <div class="dots" id="carouselDots"></div>
 </section>
 
 <footer>

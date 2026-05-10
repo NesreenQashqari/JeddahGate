@@ -13,9 +13,6 @@ app.get('/test', (req, res) => {
 });
 
 
-
-
-
 const db = mysql.createConnection({
     host: 'localhost',
     port: 3306,
@@ -71,8 +68,8 @@ app.post('/contact', (req, res) => {
 });
 
 app.post('/review', (req, res) => {
-    const { placeName, rating, reviewText } = req.body;
-
+    const { placeName, rating, reviewText, type } = req.body;
+    console.log('Received:', req.body);
     if (!placeName || !rating || !reviewText) {
         return res.json({ success: false, message: 'All fields are required' });
     }
@@ -84,16 +81,26 @@ app.post('/review', (req, res) => {
     }
 
     const clean = (str) => str.trim().replace(/[<>]/g, '');
-    const sql = `INSERT INTO reviews (place_name, rating, review_text) VALUES (?, ?, ?)`;
-
-    db.query(sql, [clean(placeName), rating, clean(reviewText)], (err) => {
+    const sql = `INSERT INTO reviews (place_name, rating, review_text, type) VALUES (?, ?, ?, ?)`;
+    console.log('type value:', type);
+    db.query(sql, [clean(placeName), rating, clean(reviewText), type], (err) => {
         if (err) return res.json({ success: false, message: 'Database error' });
         res.json({ success: true, message: 'Review submitted successfully!' });
     });
 });
 
 app.get('/reviews', (req, res) => {
-    db.query('SELECT * FROM reviews ORDER BY created_at DESC', (err, results) => {
+    db.query("SELECT * FROM reviews WHERE type = 'website' ORDER BY created_at DESC", (err, results) => {
+        if (err) return res.json({ success: false, message: 'Database error' });
+        res.json({ success: true, reviews: results });
+    });
+});
+
+app.get('/reviews/place', (req, res) => {
+    const placeName = req.query.name;
+    if (!placeName) return res.json({ success: false, message: 'Place name required' });
+    db.query("SELECT * FROM reviews WHERE type = 'place' AND place_name = ? ORDER BY created_at DESC", 
+    [placeName], (err, results) => {
         if (err) return res.json({ success: false, message: 'Database error' });
         res.json({ success: true, reviews: results });
     });

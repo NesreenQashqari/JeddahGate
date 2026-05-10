@@ -247,4 +247,62 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll(".error").forEach(e => e.textContent = "");
     }
 
+
+
+    const websiteReviewForm = document.getElementById('websiteReviewForm');
+const websiteReviewText = document.getElementById('websiteReviewText');
+
+function validateWebsiteRating() {
+    const selected = document.querySelector('input[name="websiteRating"]:checked');
+    if (!selected) { showError('websiteRatingError', 'Please select a star rating'); return false; }
+    clearError('websiteRatingError'); return true;
+}
+
+function validateWebsiteReviewText() {
+    const value = websiteReviewText.value.trim();
+    if (value === '') { showError('websiteReviewTextError', 'Please write your feedback'); return false; }
+    if (value.length < 10) { showError('websiteReviewTextError', 'At least 10 characters required'); return false; }
+    clearError('websiteReviewTextError'); return true;
+}
+
+websiteReviewText.addEventListener('input', validateWebsiteReviewText);
+document.querySelectorAll('input[name="websiteRating"]').forEach(function(input) {
+    input.addEventListener('change', validateWebsiteRating);
+});
+
+websiteReviewForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const valid = validateWebsiteRating() & validateWebsiteReviewText();
+
+    if (valid) {
+        const formData = {
+            placeName: 'JeddahGate',
+            rating: document.querySelector('input[name="websiteRating"]:checked').value,
+            reviewText: websiteReviewText.value.trim(),
+            type: 'website'
+        };
+
+        fetch('http://localhost:4000/review', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formData)
+        })
+        .then(res => res.json())
+        .then(data => {
+            const successMsg = document.getElementById('websiteReviewSuccess');
+            if (data.success) {
+                successMsg.style.display = 'block';
+                websiteReviewForm.reset();
+                clearError('websiteRatingError');
+                clearError('websiteReviewTextError');
+                setTimeout(function() { successMsg.style.display = 'none'; }, 4000);
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch(() => { alert('Could not connect to server. Make sure the server is running.'); });
+    }
+});
+
 });

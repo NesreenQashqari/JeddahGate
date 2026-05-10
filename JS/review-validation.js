@@ -58,7 +58,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const formData = {
         placeName: document.title,
         rating: document.querySelector('input[name="rating"]:checked').value,
-        reviewText: textarea.value.trim()
+        reviewText: textarea.value.trim(),
+        type: 'place'
     };
 
     fetch('http://localhost:4000/review', {
