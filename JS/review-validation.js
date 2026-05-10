@@ -27,8 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
             showError("reviewTextError", "Please write your feedback");
             return false;
         }
-        if (value.length < 3) {
-            showError("reviewTextError", "At least 3 characters required");
+        if (value.length < 10) {
+            showError("reviewTextError", "At least 10 characters required");
             return false;
         }
 
