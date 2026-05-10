@@ -1,4 +1,12 @@
 
+
+/*so the name of the page be colered when we choose it*/
+
+nav ul li a.active {
+    color:  rgb(73, 42, 7);
+}
+
+
 header {
     display: flex;
     justify-content: center;
@@ -13,6 +21,8 @@ nav {
     background-color: transparent;
     backdrop-filter: blur(100px);
     box-shadow: 0 0 30px rgb(88, 87, 87);
+    font-weight: bolder;
+    font-size: 27px;
 }
 
 nav ul {

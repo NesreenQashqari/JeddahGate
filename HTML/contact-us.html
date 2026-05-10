@@ -21,7 +21,7 @@
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about-us.html">About</a></li>
-            <li><a href="contact-us.html">Contact Us</a></li>
+            <li><a href="contact-us.html" class="active">Contact Us</a></li>
             <li><a href="discover.html">Discover</a></li>
         </ul>
     </nav>
@@ -134,10 +134,12 @@
 </div>
 
 
-
+        <!-- review us section-->
         <div class="review-section">
     <h2>Review Our Website</h2>
     <form id="websiteReviewForm">
+
+        <!-- this is for the start rating-->
         <div class="star-rating">
             <input type="radio" name="websiteRating" id="wstar5" value="5">
             <label for="wstar5">&#9733;</label>
@@ -155,11 +157,13 @@
         <textarea id="websiteReviewText" placeholder="Share your experience with us..." required minlength="10" maxlength="300"></textarea>
         <small class="error" id="websiteReviewTextError"></small>
 
+       
+
+        <button type="submit">Submit Review</button>
+
         <div id="websiteReviewSuccess" style="display:none;">
             <p>&#10003; Review submitted successfully!</p>
         </div>
-
-        <button type="submit">Submit Review</button>
     </form>
 </div>
 

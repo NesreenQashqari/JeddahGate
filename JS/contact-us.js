@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
         clearError("languageError");
         return true;
     }
-
+    // this validate the text in the message in form:
     function validateMessage() {
         const value = message.value.trim();
 
@@ -257,7 +257,7 @@ function validateWebsiteRating() {
     if (!selected) { showError('websiteRatingError', 'Please select a star rating'); return false; }
     clearError('websiteRatingError'); return true;
 }
-
+// this for the 'review our website'
 function validateWebsiteReviewText() {
     const value = websiteReviewText.value.trim();
     if (value === '') { showError('websiteReviewTextError', 'Please write your feedback'); return false; }

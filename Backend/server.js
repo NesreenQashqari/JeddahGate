@@ -15,7 +15,7 @@ app.get('/test', (req, res) => {
 
 const db = mysql.createConnection({
     host: 'localhost',
-    port: 3306,
+    port: 8889,
     user: 'root',
     password: 'root',
     database: 'jeddahgate'

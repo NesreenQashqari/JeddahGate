@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
             showError("reviewTextError", "Please write your feedback");
             return false;
         }
+        // this one shows in the contact us review only 
         if (value.length < 10) {
             showError("reviewTextError", "At least 10 characters required");
             return false;
