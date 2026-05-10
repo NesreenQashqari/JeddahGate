@@ -58,7 +58,12 @@ body {
     border: 1px solid #ccc;
     box-sizing: border-box; 
 }
-
+.input-box label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-right: 16px;
+}
 .right-side {
     width: 30%;
     text-align: center;
