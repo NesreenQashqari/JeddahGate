@@ -39,10 +39,11 @@ body {
     min-width: 220px;
     height: auto;
     background-color: #f5f5f5;
-    margin-top: 140px;
+    margin-top: 102px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
+    
 }
  
 .detail-info h2 {
@@ -151,29 +152,9 @@ body {
 .btn-back:hover {
     background: rgb(200, 190, 148);
 }
+
  
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-        margin: 20px;
-        padding: 16px;
-    }
- 
-    .detail-main {
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
- 
-    .detail-info {
-        margin-top: 0;
-    }
- 
-    .detail-main img.detail-img {
-        height: 260px;
-    }
-}
- 
+
 .place-reviews-section {
     max-width: 600px;
     margin: 30px auto;
@@ -230,6 +211,11 @@ body {
 
 .rev-card {
     padding: 32px 36px;
+    height: 160px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(200, 169, 110, 0.5) transparent;
     background: rgba(255, 255, 255, 0.05);
     border: 2px solid rgba(251, 233, 200, 0.496);
     border-radius: 16px;
@@ -248,10 +234,11 @@ body {
 
 .rev-quote {
     font-family: 'Times New Roman', serif;
-    font-size: 26px;
-    color: rgba(232, 228, 203, 0.9);
+    font-size: 1.1rem;
+    color: rgba(232, 228, 203, 0.792);
     line-height: 1.7;
     font-style: italic;
+    word-break: break-word;
 }
 
 .dots {
@@ -272,4 +259,74 @@ body {
 
 .dot.active {
     background: #c8a96e;
+}
+
+
+.rev-card::-webkit-scrollbar {
+    width: 0.5px;
+}
+
+.rev-card::-webkit-scrollbar-thumb {
+    background: rgba(200, 169, 110, 0.5);
+    border-radius: 50px;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 20px;
+        padding: 16px;
+    }
+ 
+    .detail-main {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+ 
+    .detail-info {
+        margin-top: 0;
+    }
+ 
+    .detail-main img.detail-img {
+        height: 260px;
+    }
+}
+ 
+
+@media (max-width: 576px) {
+    .carousel-outer {
+        max-width: 100%;
+        gap: 6px;
+    }
+
+    .rev-card {
+        padding: 20px;
+    }
+
+    .rev-quote {
+        font-size: 16px;
+    }
+
+    .carousel-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 14px;
+    }
+
+    .place-reviews-section {
+        max-width: 100%;
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-outer {
+        max-width: 100%;
+    }
+
+    .place-reviews-section {
+        max-width: 100%;
+    }
 }

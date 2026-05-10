@@ -40,15 +40,13 @@
             <input type="radio" name="rating" id="star1" value="1">
             <label for="star1">&#9733;</label>
         </div>
+        
         <small class="error" id="ratingError"></small>
-
         <textarea id="reviewText" placeholder="write your feedback..." required minlength="10" maxlength="300"></textarea>
         <small class="error" id="reviewTextError"></small>
-
         <div id="reviewSuccess" style="display:none;">
-            <p>Review submitted successfully!</p>
+          <p>&#10003; Review submitted successfully!</p>
         </div>
-
         <button type="submit">Submit Review</button>
 
     </form>
@@ -56,6 +54,22 @@
   </div>
   
 </div>
+
+
+<div class="place-reviews-section">
+    <h2>What Visitors Say</h2>
+    <div class="carousel-outer">
+        <button class="carousel-btn" id="placeRevPrev">&#8592;</button>
+        <div class="carousel-track">
+            <div class="carousel-inner" id="placeRevTrack"></div>
+        </div>
+        <button class="carousel-btn" id="placeRevNext">&#8594;</button>
+    </div>
+    <div class="dots" id="placeRevDots"></div>
+</div>
+
 <script src="../JS/review-validation.js"></script>
+<script src="../JS/place-reviews.js"></script>
+
 </body>
 </html>

@@ -9,15 +9,15 @@ document.addEventListener('DOMContentLoaded', function () {
         .then(function (res) { return res.json(); })
         .then(function (data) {
            if (!data.success || data.reviews.length === 0) {
-    var card = document.createElement('div');
-    card.className = 'rev-card';
-    card.style.width = '100%';
-    card.style.flexShrink = '0';
-    card.innerHTML = '<div class="rev-quote">No reviews yet. Be the first to leave one!</div>';
-    track.appendChild(card);
-    track.style.width = '100%';
-    return;
-}
+            var card = document.createElement('div');
+            card.className = 'rev-card';
+            card.style.width = '100%';
+            card.style.flexShrink = '0';
+            card.innerHTML = '<div class="rev-quote">No reviews yet. Be the first to leave one!</div>';
+            track.appendChild(card);
+            track.style.width = '100%';
+            return;
+        }
 
             total = data.reviews.length;
             track.style.width = (total * 100) + '%';
@@ -44,8 +44,14 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('nextBtn').addEventListener('click', function () { goTo(current + 1); });
         })
         .catch(function () {
-            track.innerHTML = '<div class="rev-card"><div class="rev-quote">Could not load reviews.</div></div>';
-        });
+            var card = document.createElement('div');
+            card.className = 'rev-card';
+            card.style.width = '100%';
+            card.style.flexShrink = '0';
+            card.innerHTML = '<div class="rev-quote">Could not load reviews. Please try again later.</div>';
+            track.appendChild(card);
+            track.style.width = '100%';
+});
 
     function goTo(n) {
         current = (n + total) % total;
