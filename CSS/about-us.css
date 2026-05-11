@@ -1,87 +1,193 @@
-
-
-
-*{
+* {
     font-family: 'Times New Roman', Times, serif;
 }
 
-body{
-    background-image:url('../Media/albald.jpeg') ;
+body {
+    background-image: url('../Media/albald.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-     overflow-y: scroll;
-    position: relative; /* this was edited for responsiveness */
+    overflow-y: scroll;
+    position: relative;
 }
 
-/* container for tables in one row */
+/* PAGE INTRO */
+.page-intro {
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+.page-title {
+    font-size: 38px;
+    font-weight: bolder;
+    color: rgba(232, 220, 203, 0.9);
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.page-sub {
+    font-size: 25px;
+      font-weight: bolder;
+    color: rgba(232, 228, 203, 0.6);
+    font-style: italic;
+}
+
+/* CONTAINER */
 .tables-container {
-    display: flex;              /* tables in one row */
-    justify-content: space-between; 
-    gap: 20px;                 /* spacing between tables */
-    padding: 20px;
-    margin-top: 100px;
-    flex-wrap: wrap; /* this was edited for responsiveness */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    max-width: 700px;
+    
+    margin: 0 auto 40px;
 }
 
-/* style for  tables */
-.profile-table {
-    width: 30%; /* each table is 1/3 width */ 
-    border: 1px;
-    border-collapse: separate;
-    border-spacing: 10px;
-    text-align: center;       
-    margin: 0 10px;
-    background-color: rgba(232,228,203,0.792);
+/* MEMBER CARD */
+.member-card {
+    background-color: rgba(232, 228, 203, 0.792);
     border-radius: 2rem;
     box-shadow: 0 0 30px rgb(52, 52, 52);
+    overflow: hidden;
+    
+    padding-bottom: 20px;
 }
 
-.profile-table a{
-    margin: 0 10px;   
-    font-size: 20px;  
+/* HERO SECTION */
+.member-hero {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 1.25rem 1.5rem;
+    background-color: rgba(200, 155, 80, 0.18);
+    background-image: url('../Media/about-us-pattern.webp');
+    background-size: 110px 110px;
+    background-repeat: repeat;
+    border-bottom: 1px solid rgba(130, 67, 22, 0.15);
+}
+.member-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: rgba(232, 228, 203, 0.9);
+    border: 2px solid rgb(130, 67, 22);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(130, 67, 22);
+    flex-shrink: 0;
+}
+
+.member-intro {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.role-pill {
+    background: rgb(130, 67, 22);
+    color: rgba(232, 228, 203, 0.9);
+    font-size: 11px;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-weight: 500;
+    display: inline-block;
+    width: fit-content;
+}
+
+.member-name {
+    font-size: 17px;
+    font-weight: 600;
+    color: rgb(74, 53, 21);
+    margin: 0;
+}
+
+.member-bio {
+    font-size: 13px;
+    color: rgb(100, 75, 40);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* TABLE */
+.profile-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.profile-table td {
+    padding: 10px 1.5rem;
+    font-size: 14px;
+    color: rgb(74, 53, 21);
+    border: none;
+    vertical-align: middle;
+}
+
+.label-cell {
+    color: rgb(130, 67, 22) !important;
+    font-weight: 600;
+    width: 130px;
+    font-size: 13px !important;
+}
+
+.profile-table a {
+    margin: 0 8px;
+    font-size: 20px;
     text-decoration: none;
     color: rgb(130, 67, 22);
+    transition: color 0.3s;
 }
 
-/* style cells */
-.profile-table th,
-.profile-table td {
-    padding: 10px;
+.profile-table a:hover {
+    color: rgb(15, 113, 67);
 }
 
-
-/* MEDIA QUERIES  */
-
-
-/* MOBILE */
-@media (max-width: 576px){
-    nav ul{
-        flex-direction: column; /* this was edited for responsiveness */
-        gap: 15px; /* this was edited for responsiveness */
-        align-items: center; /* this was edited for responsiveness */
+/* MEDIA QUERIES */
+@media (max-width: 576px) {
+    nav ul {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
     }
 
-    nav ul li a{
-        font-size: 18px; /* this was edited for responsiveness */
+    nav ul li a {
+        font-size: 18px;
     }
 
-    .tables-container{
-        flex-direction: column; /* stack tables  */
-        gap: 15px; 
-        align-items: center; /* this was edited for responsiveness */
+    .tables-container {
+        padding: 10px;
     }
 
-    .profile-table{
-        width: 95%; /* full width on mobile */
-        margin: 0 auto; /* center tables on mobile */
+    .member-hero {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    .role-pill {
+        align-self: center;
+    }
+
+    .profile-table td {
+        padding: 8px 1rem;
+        font-size: 13px;
+    }
+
+    .label-cell {
+        width: 90px;
     }
 }
 
-/* TABLET */
-@media (max-width: 768px){
-    .profile-table{
-        width: 45%; /* 2 tables per row on tablet */
-        margin: 0 auto; /* center tables on tablet */
+@media (max-width: 768px) {
+    .tables-container {
+        max-width: 95%;
     }
 }
