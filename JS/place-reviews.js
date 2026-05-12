@@ -47,7 +47,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 dot.addEventListener('click', function () { goTo(parseInt(this.dataset.index)); });
                 dotsContainer.appendChild(dot);
             });
-
+            
+            // ADD EVENT LISTENERS FOR NAV BUTTONS
             document.getElementById('placeRevPrev').addEventListener('click', function () { goTo(current - 1); });
             document.getElementById('placeRevNext').addEventListener('click', function () { goTo(current + 1); });
         })
