@@ -209,8 +209,8 @@ input[type="submit"]:hover {
     margin-bottom: 8px;
 }
  
-/* this for review sucess to be hidden */
-.websiteReviewSuccess {
+.websiteReviewSuccess, 
+#websiteReviewSuccess {
     display: none;
 }
 
