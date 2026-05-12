@@ -26,44 +26,48 @@ p{
 }
 
 /*WELCOME PAGE CONTAINER*/
-.welcome-page{
-   display: flex;
-   margin-top: 95px;
-   background-color:rgba(232, 228, 203, 0.792) !important; 
-   border-radius: 50px;
-   margin-left: 40px;
-   margin-right: 40px;
-   border: 2px solid rgba(232, 228, 203, 0.4);
+.welcome-page {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 95px;
+    background-color: rgba(232, 228, 203, 0.792) !important;
+    border-radius: 50px;
+    margin-left: 40px;
+    margin-right: 40px;
+    border: 2px solid rgba(232, 228, 203, 0.4);
+    overflow: hidden;
+    gap: 20px;
+    padding: 30px;
 }
 
 /* PURPOSE BOX */
-.purpose-box{
-    max-width: 700px;
-    margin: 73px auto;
+.purpose-box {
+    flex: 1;
     padding: 20px;
-    width: 90%;
-    padding-bottom: 100px; 
-    
+    margin: 0;
+    width: auto;
+    max-width: none;
+    padding-bottom: 20px;
 }
 
 /*CONTROLS WELCOME TEXT*/
-.purpose-box p{
-    text-align: left !important; 
+.purpose-box p {
+    text-align: left !important;
     color: #472c09;
     font-size: 33px;
+    margin-top: 10px;
 }
 
 
 /* ALBALAD IMAGE */
 .albalad-img {
-    max-width: 450px;
-    width: 100%;
-    margin-right: 200px;
     flex-shrink: 0;
+    width: 350px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-right: 40px;
+    padding-right: 20px;
 }
 
 /* STAMP INNER IMAGE */
@@ -73,8 +77,6 @@ p{
     object-fit: cover;
     position: static;
     transform: none;
-    top: auto;
-    left: auto;
 }
 
 .why-section {
@@ -87,7 +89,7 @@ p{
     font-size: 45px;
     color: rgb(235, 174, 113);
     margin-bottom: 30px;
-    margin-top: 30px;
+    margin-top: 136px;
     font-weight: bold;
     text-align: center;
 }
@@ -340,8 +342,8 @@ footer{
 
 /* MEDIA QUERIES */
 @media (max-width: 992px) {
-    .why-grid {
-        gap: 30px;
+    .why-grid { 
+        gap: 30px; 
     }
 }
 
@@ -351,77 +353,60 @@ footer{
         margin-left: 15px;
         margin-right: 15px;
         border-radius: 20px;
+        padding: 20px;
     }
-
-    .purpose-box {
-        margin: 30px auto;
-        padding-bottom: 20px;
-    }
-
     .albalad-img {
-        margin-right: 0;
-        margin-bottom: 30px;
-        max-width: 100%;
-        height: 300px;
+        width: 60%;
+        padding-right: 0;
+        margin-bottom: 20px;
     }
-
-    .stamp-inner-img {
-        width: 80%;
-        height: 100%;
-    }
-
     .review {
-        width: 80%;
-    }
-
-    .carousel-outer {
-        max-width: 100%;
+         width: 80%;
+         }
+    .carousel-outer { 
+        max-width: 100%; 
     }
 }
 
 @media (max-width: 576px) {
     .welcome-page {
+        flex-direction: row;
+        align-items: flex-start;
         margin-left: 10px;
         margin-right: 10px;
         border-radius: 15px;
+        padding: 15px;
+        gap: 10px;
+    }
+    .purpose-box p { 
+        font-size: 16px !important;
+    
+    }
+    .welcome { 
+        font-size: 14px !important; 
     }
 
-    .welcome {
-        font-size: 15px !important;
+    .albalad-img {
+        width: 130px;
+        flex-shrink: 0;
+        padding-right: 0;
+        margin-bottom: 0;
+    }
+    p { 
+        font-size: 18px; 
+    }
+    .carousel-outer { 
+        max-width: 100%; gap: 6px; 
     }
 
-    .purpose-box p {
-        font-size: 20px !important;
+    .rev-card { 
+        padding: 20px; 
     }
 
-   .albalad-img {
-    align-self: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    height: auto;
-    }
-
-    p {
-        font-size: 18px;
-    }
-
-    .carousel-outer {
-        max-width: 100%;
-        gap: 6px;
-    }
-
-    .rev-card {
-        padding: 20px;
-    }
-
-    .rev-quote {
+    .rev-quote { 
         font-size: 16px;
-    }
-
-    .carousel-btn {
-        width: 30px;
-        height: 30px;
-        font-size: 14px;
+     }
+    .carousel-btn { 
+        width: 30px; height: 30px; font-size: 14px; 
     }
 }
