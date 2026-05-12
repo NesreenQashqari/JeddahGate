@@ -15,7 +15,7 @@ app.get('/test', (req, res) => {
 
 const db = mysql.createConnection({
     host: 'localhost',
-    port: 8889,
+    port: 3306,
     user: 'root',
     password: 'root',
     database: 'jeddahgate'
@@ -109,3 +109,4 @@ app.get('/reviews/place', (req, res) => {
 app.listen(4000, () => {
     console.log('Server running on port 4000');
 });
+

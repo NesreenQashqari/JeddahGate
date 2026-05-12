@@ -17,7 +17,7 @@ body {
     margin-top: 70px;
     margin-bottom: 10px;
 }
-
+/* MAIN TITLE */
 .page-title {
     font-size: 38px;
     font-weight: bolder;
@@ -26,9 +26,10 @@ body {
     margin-bottom: 6px;
 }
 
+/* SUBTITLE*/
 .page-sub {
     font-size: 25px;
-      font-weight: bolder;
+    font-weight: bolder;
     color: rgba(232, 228, 203, 0.6);
     font-style: italic;
 }
@@ -67,6 +68,8 @@ body {
     background-repeat: repeat;
     border-bottom: 1px solid rgba(130, 67, 22, 0.15);
 }
+
+/* AVATAR FOR EACH MEMBER */
 .member-avatar {
     width: 60px;
     height: 60px;
@@ -82,12 +85,14 @@ body {
     flex-shrink: 0;
 }
 
+/* INTRODUCTION SECTION */
 .member-intro {
     display: flex;
     flex-direction: column;
     gap: 3px;
 }
 
+/* ROLE FOR EACH MEMBER */
 .role-pill {
     background: rgb(130, 67, 22);
     color: rgba(232, 228, 203, 0.9);
@@ -99,6 +104,7 @@ body {
     width: fit-content;
 }
 
+/* NAME FOR EACH MEMBER */
 .member-name {
     font-size: 17px;
     font-weight: 600;
@@ -106,6 +112,7 @@ body {
     margin: 0;
 }
 
+/* BIO FOR EACH MEMBER */
 .member-bio {
     font-size: 13px;
     color: rgb(100, 75, 40);
@@ -123,6 +130,7 @@ body {
     box-shadow: none;
 }
 
+/* TABLE CELLS */
 .profile-table td {
     padding: 10px 1.5rem;
     font-size: 14px;
@@ -131,6 +139,7 @@ body {
     vertical-align: middle;
 }
 
+/* CELL LABEL */
 .label-cell {
     color: rgb(130, 67, 22) !important;
     font-weight: 600;
@@ -138,6 +147,7 @@ body {
     font-size: 13px !important;
 }
 
+/* LINKS IN THE TABLE */
 .profile-table a {
     margin: 0 8px;
     font-size: 20px;
@@ -149,6 +159,7 @@ body {
 .profile-table a:hover {
     color: rgb(15, 113, 67);
 }
+
 
 /* MEDIA QUERIES */
 @media (max-width: 576px) {

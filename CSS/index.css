@@ -1,6 +1,5 @@
 *{
     margin: 0;
-   
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
@@ -18,112 +17,74 @@ body{
     background-attachment: fixed;
 }
 
-
 p{
-    color:#472c09;
+    color:#471809;
     font-size: 25px;
     text-align: center;
     margin-top: 80px;
     gap: 30px;
 }
 
+/*WELCOME PAGE CONTAINER*/
 .welcome-page{
-    display: flex;
-   margin-top: 20px;
-   background-color:rgba(232, 228, 203, 0.792) !important; /*override the white*/
+   display: flex;
+   margin-top: 95px;
+   background-color:rgba(232, 228, 203, 0.792) !important; 
    border-radius: 50px;
    margin-left: 40px;
    margin-right: 40px;
    border: 2px solid rgba(232, 228, 203, 0.4);
-  
-   
 }
 
+/* PURPOSE BOX */
 .purpose-box{
     max-width: 700px;
-    margin: 80px auto;
+    margin: 73px auto;
     padding: 20px;
     width: 90%;
-    padding-bottom: 100px;
-   
-}
-
-/*controls welcome text*/
-.purpose-box p{
-   
-    text-align: left !important; 
-    color: #472c09;
-   
-}
-
-
-.albalad-img {
-    max-width: 450px;
-    width: 100%;
-    margin-right: 70px;
-    margin-bottom: 90px;
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-}
-
-
-
-
-.stamp-inner-img {
-    position: absolute;
-    width: 90%;       /* adjust to fit inside the stamp border */
-    height: 485px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    margin-top:40px;
-}
-
-
-/*
-.why-section {
-    max-width: 5000px; 
-    margin: 60px auto;
-    padding: 0 20px;
-    padding-bottom: 30px;
-    text-align: left;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid rgba(232, 228, 203, 0.4);
-    border-radius: 15px;
-    background-color:rgba(121, 50, 4) ;
-}
-*/
-
-.welcome{
-
-     font-size: 50px;
-     color: rgb(235, 174, 113);
-     
-
-}
-
-.purpose{
-
-     font-size: 20px;
-     color: rgb(235, 174, 113);
-     
-
-}
-
-.why-section {
-
-    padding: 20px;
+    padding-bottom: 100px; 
     
 }
 
+/*CONTROLS WELCOME TEXT*/
+.purpose-box p{
+    text-align: left !important; 
+    color: #472c09;
+    font-size: 33px;
+}
+
+
+/* ALBALAD IMAGE */
+.albalad-img {
+    max-width: 450px;
+    width: 100%;
+    margin-right: 200px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 40px;
+}
+
+/* STAMP INNER IMAGE */
+.stamp-inner-img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    position: static;
+    transform: none;
+    top: auto;
+    left: auto;
+}
+
+.why-section {
+    padding: 20px;
+}
+
 .why-title {
-    padding-top: 20px;
+    padding-top: 15px;
     font-family: 'Times New Roman', serif;
-    font-size: 28px;
+    font-size: 45px;
     color: rgb(235, 174, 113);
     margin-bottom: 30px;
     margin-top: 30px;
@@ -131,13 +92,14 @@ p{
     text-align: center;
 }
 
+/* UNDERLINE FOR WHY CHOOSE US TITLE */
 .why-title::after {
     content: '';
     display: block;
-    width: 280px;
+    width: 400px;
     height: 2px;
-    background: rgba(200, 169, 110, 0.6);
-    margin: 12px auto 0;
+    background: rgb(235, 174, 113);
+    margin: 9px auto 0;
 }
 
 .why-grid {
@@ -154,16 +116,15 @@ p{
     margin: 60px auto;
     padding: 0 20px;
     padding-bottom: 30px;
-    padding-top: 10px; /* this to lower the icon a noch so its set perfect*/
-    text-align: center; /* this one controls the icons */
+    padding-top: 10px; 
+    text-align: center; 
     background: rgba(255, 255, 255, 0.1);
     border: 2px solid rgba(232, 228, 203, 0.4);
     border-radius: 15px;
     background-color: rgba(102, 67, 44 ) ;
-    
-
 }
 
+/* ICONS IN THE WHY CHOOSE US SECTION */
 .why-item i {
     font-size: 28px;
     color: #ffffff;
@@ -178,6 +139,7 @@ p{
     border: 1px solid rgba(200, 168, 110, 0.552);
 }
 
+/*TITLE UNDER EACH ICON*/
 .why-item-title {
     font-size: 16px;
     font-weight: bolder;
@@ -186,12 +148,13 @@ p{
     margin-top: 0;
 }
 
+/*DESCRIPTION TEXT UNDER EACH ICON */
 .why-item-desc {
     font-size: 16px;
     color: rgb(232, 228, 203);
     line-height: 1.6;
     margin: 0;
-    text-align: center; /*changed this to center */
+    text-align: center; 
 }
 
 
@@ -234,6 +197,7 @@ p{
     max-width: 100%;
 }
 
+
 .head-review img{
     border-radius: 50%;
     width: 120px;
@@ -245,8 +209,8 @@ p{
     color: gold;
 }
 
-/* REVIEW CARD */
 
+/* REVIEW CARD */
 .carousel-outer {
     display: flex;
     align-items: center;
@@ -255,6 +219,7 @@ p{
     margin: 0 auto;
 }
 
+/* CAROUSEL NAVIGATION BUTTONS */
 .carousel-btn {
     background: rgba(232, 228, 203, 0.9);
     border: 1px solid rgba(200, 169, 110, 0.3);
@@ -275,19 +240,21 @@ p{
     background:  rgba(86, 65, 39, 0.9);
 }
 
+/* CAROUSEL TRACK (HIDES OVERFLOW) */
 .carousel-track {
     overflow: hidden;
     flex: 1;
     width: 100%
 }
 
+/* CAROUSEL INNER (HOLDS ALL REVIEW CARDS) */
 .carousel-inner {
     display: flex;
     width: 100%;
     transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
+/* STAR RATING */
 .rev-stars {
     color: #c8a96e;
     font-size: 18px;
@@ -295,6 +262,7 @@ p{
     margin-bottom: 16px;
 }
 
+/* REVIEW QUOTE */
 .rev-quote {
     font-family: 'Times New Roman', serif;
     font-size: 1.1rem;
@@ -307,6 +275,7 @@ p{
 
 }
 
+/* CAROUSEL DOTS */
 .dots {
     display: flex;
     justify-content: center;
@@ -314,6 +283,7 @@ p{
     margin-top: 20px;
 }
 
+/* EACH INDIVIDUAL DOT */
 .dot {
     width: 6px;
     height: 6px;
@@ -323,10 +293,12 @@ p{
     transition: background 0.3s;
 }
 
+/* ACTIVE DOT COLOR */
 .dot.active {
     background: #c8a96e;
 }
 
+/*REVIEW CARD*/
 .rev-card {
     padding: 32px 36px;
     height: 160px;
@@ -343,17 +315,19 @@ p{
     backdrop-filter: blur(10px);
 }
 
+/* SCROLLBAR FOR REVIEW CARDS */
 .rev-card::-webkit-scrollbar {
     width: 0.5px;
 }
 
+/* SCROLLBAR THUMB COLOR */
 .rev-card::-webkit-scrollbar-thumb {
     background: rgba(200, 169, 110, 0.5);
     border-radius: 50px;
 }
 
-/*FOOTER*/
 
+/*FOOTER*/
 footer{
     margin-top: auto;
     padding: 20px 20px;
@@ -365,31 +339,9 @@ footer{
 
 
 /* MEDIA QUERIES */
-@media (max-width: 576px){
-   
-    .values-box{
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    p{
-        font-size: 18px;
-    }
-}
-
-@media (max-width: 768px){
-    .values-box{
-        gap: 40px;
-    }
-
-    .review{
-        width: 80%;
-    }
-}
-
-@media (max-width: 992px){
-    .values-box{
-        gap: 60px;
+@media (max-width: 992px) {
+    .why-grid {
+        gap: 30px;
     }
 }
 
@@ -417,6 +369,14 @@ footer{
         width: 80%;
         height: 100%;
     }
+
+    .review {
+        width: 80%;
+    }
+
+    .carousel-outer {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 576px) {
@@ -434,15 +394,18 @@ footer{
         font-size: 20px !important;
     }
 
-    .albalad-img {
-        height: 320px;
-        width: 300px;
-        margin-left: 100px;
+   .albalad-img {
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: auto;
     }
-}
 
+    p {
+        font-size: 18px;
+    }
 
-@media (max-width: 576px) {
     .carousel-outer {
         max-width: 100%;
         gap: 6px;
@@ -460,11 +423,5 @@ footer{
         width: 30px;
         height: 30px;
         font-size: 14px;
-    }
-}
-
-@media (max-width: 768px) {
-    .carousel-outer {
-        max-width: 100%;
     }
 }
