@@ -226,7 +226,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 successMsg.style.display = 'none';
             }, 4000);
         } else {
-            alert(data.message);
+            showError('mobileError', data.message);
+
         }
     })
     .catch(() => {
