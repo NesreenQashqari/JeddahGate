@@ -1,3 +1,5 @@
+
+// setup 
 document.addEventListener("DOMContentLoaded", function () {
 
     const form = document.getElementById("contactForm");
@@ -13,8 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // set max date on dob to today
     dobInput.max = new Date().toISOString().split("T")[0];
 
-    // EMAIL (STRONG VALIDATION)
-
+    // EMAIL PATTREN VALIDATION
     function isValidEmail(value) {
         const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         return pattern.test(value);
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     // VALIDATION FUNCTIONS
    
+    //validate the first name 
     function validateFirstName() {
         const value = firstName.value.trim();
 
@@ -59,6 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
         return true;
     }
 
+
+    //validate the first name 
     function validateLastName() {
         const value = lastName.value.trim();
 
@@ -78,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
         clearError("lastNameError");
         return true;
     }
-
+    // validate gender 
     function validateGender() {
         const selected = document.querySelector('input[name="gender"]:checked');
 
@@ -90,15 +94,20 @@ document.addEventListener("DOMContentLoaded", function () {
         clearError("genderError");
         return true;
     }
-
+    
+    //validate the DOB
     function validateDob() {
     const value = dobInput.value;
+
+    // if the user did not choose dob
 
     if (!value) {
         showError("dobError", "Date of birth is required");
         return false;
     }
-
+    
+    // we created a condtion that the user must be older than 13
+    // if the user was yonger than 13
     const dob = new Date(value);
     const today = new Date();
     const age = today.getFullYear() - dob.getFullYear();
@@ -121,6 +130,9 @@ document.addEventListener("DOMContentLoaded", function () {
     clearError("dobError");
     return true;
 }
+
+
+    // validate  email
     function validateEmail() {
         const value = email.value.trim();
 
@@ -136,23 +148,42 @@ document.addEventListener("DOMContentLoaded", function () {
         clearError("emailError");
         return true;
     }
+    
+
+    //this is the new validate 
+    // again like the backend this checks the input if it start whith 05 or +966 and the inforce sperate condition depending on the case 
 
     function validateMobile() {
-        const value = mobile.value.trim();
+    const value = mobile.value.trim();
 
-        if (value === "") {
-            showError("mobileError", "Mobile number is required");
-            return false;
-        }
-        if (!/^\+?[0-9]{9,15}$/.test(value)) {
-            showError("mobileError", "Enter a valid mobile number");
-            return false;
-        }
-
-        clearError("mobileError");
-        return true;
+    if (value === "") {
+        showError("mobileError", "Mobile number is required");
+        return false;
     }
 
+    if (value.startsWith("05")) {
+        if (!/^05[0-9]{8}$/.test(value)) {
+            showError("mobileError", "Mobile number must be exactly 10 digits");
+            return false;
+        }
+    } else if (value.startsWith("+966")) {
+        if (!/^\+966[0-9]{9}$/.test(value)) {
+            showError("mobileError", "Mobile number must be exactly 13 characters");
+            return false;
+        }
+    } else {
+        showError("mobileError", "Mobile must start with 05 or +966");
+        return false;
+    }
+
+    clearError("mobileError");
+    return true;
+}
+
+
+
+
+    // validate language 
     function validateLanguage() {
         const checked = document.querySelectorAll('input[name="language"]:checked');
 
@@ -164,6 +195,8 @@ document.addEventListener("DOMContentLoaded", function () {
         clearError("languageError");
         return true;
     }
+
+
     // this validate the text in the message in form:
     function validateMessage() {
         const value = message.value.trim();
@@ -185,8 +218,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // SUBMIT VALIDATION
     
     form.addEventListener("submit", function (e) {
-        e.preventDefault();
+        e.preventDefault(); // stop the page from refreshing 
+        
 
+        // to check if every thing is valid 
         const valid =
             validateFirstName() &
             validateLastName() &
@@ -196,7 +231,9 @@ document.addEventListener("DOMContentLoaded", function () {
             validateMobile() &
             validateMessage() &
             validateLanguage();
+        
 
+        // if its valid it will collect the data 
         if (valid) {
     const formData = {
         firstName: firstName.value.trim(),
@@ -209,6 +246,8 @@ document.addEventListener("DOMContentLoaded", function () {
         message: message.value.trim()
     };
 
+
+    // send the data  to the server 
     fetch('http://localhost:4000/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -216,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .then(res => res.json())
     .then(data => {
-        const successMsg = document.getElementById('successMessage');
+        const successMsg = document.getElementById('successMessage'); // sucesse
         if (data.success) {
             successMsg.style.display = 'block';
             form.reset();
@@ -225,25 +264,29 @@ document.addEventListener("DOMContentLoaded", function () {
                 successMsg.style.display = 'none';
             }, 4000);
         } else {
-            showError('mobileError', data.message);
+            showError('serverError', '⚠️ Server error: ' + data.message); //error
 
         }
     })
     .catch(() => {
-        alert('Could not connect to server. Make sure the server is running.');
+        alert('Could not connect to server. Make sure the server is running.'); // error in connection
     });
 }
     });
 
+
+
     
     // ERROR HANDLING
-    
+    //find the small elment (in html) and put the error text inside it 
+    // add the error in the right place 
     function showError(id, message) {
         const el = document.getElementById(id);
         el.textContent = message;
-        el.style.color = "red";
+        
     }
-
+    
+    // if user fixed it , remove the error 
     function clearError(id) {
         document.getElementById(id).textContent = "";
     }
@@ -253,16 +296,27 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+// ------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------
 
-    const websiteReviewForm = document.getElementById('websiteReviewForm');
+// the review part 
+
+// grap elements
+const websiteReviewForm = document.getElementById('websiteReviewForm');
 const websiteReviewText = document.getElementById('websiteReviewText');
 
+
+//validation for the ratings 
 function validateWebsiteRating() {
     const selected = document.querySelector('input[name="websiteRating"]:checked');
-    if (!selected) { showError('websiteRatingError', 'Please select a star rating'); return false; }
-    clearError('websiteRatingError'); return true;
+    if (!selected) { showError('websiteRatingError', 'Please select a star rating');
+         return false; 
+        }
+    clearError('websiteRatingError');
+     return true;
 }
 // this for the 'review our website'
+// check if its empty 
 function validateWebsiteReviewText() {
     const value = websiteReviewText.value.trim();
     if (value === '') { showError('websiteReviewTextError', 'Please write your feedback'); return false; }
@@ -270,15 +324,17 @@ function validateWebsiteReviewText() {
     clearError('websiteReviewTextError'); return true;
 }
 
+// add event listener for the text area and the rating
 websiteReviewText.addEventListener('input', validateWebsiteReviewText);
 document.querySelectorAll('input[name="websiteRating"]').forEach(function(input) {
     input.addEventListener('change', validateWebsiteRating);
 });
 
+
 websiteReviewForm.addEventListener('submit', function(e) {
     e.preventDefault();
 
-    const valid = validateWebsiteRating() & validateWebsiteReviewText();
+    const valid = validateWebsiteRating() & validateWebsiteReviewText(); // both validation run at the same time 
 
     if (valid) {
         const formData = {
@@ -287,26 +343,29 @@ websiteReviewForm.addEventListener('submit', function(e) {
             reviewText: websiteReviewText.value.trim(),
             type: 'website'
         };
-
+        
+        // sending our data to the server 
         fetch('http://localhost:4000/review', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
         })
-        .then(res => res.json())
+        .then(res => res.json()) //conerting from raw responce to readable js data
+
+        //work whit the converted data
         .then(data => {
             const successMsg = document.getElementById('websiteReviewSuccess');
             if (data.success) {
-                successMsg.style.display = 'block';
-                websiteReviewForm.reset();
+                successMsg.style.display = 'block'; //show sucess message 
+                websiteReviewForm.reset(); // clear all form fields 
                 clearError('websiteRatingError');
                 clearError('websiteReviewTextError');
-                setTimeout(function() { successMsg.style.display = 'none'; }, 4000);
+                setTimeout(function() { successMsg.style.display = 'none'; }, 4000); // hide message after 4 sec
             } else {
-                alert(data.message);
+                alert(data.message); // if serever rejected the data show the server error message 
             }
         })
-        .catch(() => { alert('Could not connect to server. Make sure the server is running.'); });
+        .catch(() => { alert('Could not connect to server. Make sure the server is running.'); }); // connection prplems 
     }
 });
 

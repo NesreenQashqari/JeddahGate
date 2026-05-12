@@ -210,8 +210,14 @@ input[type="submit"]:hover {
 }
  
 /* this for review sucess to be hidden */
-#websiteReviewSuccess {
+.websiteReviewSuccess {
     display: none;
+}
+
+/* this is for the error message */
+
+.error {
+    color: red;
 }
 
 
