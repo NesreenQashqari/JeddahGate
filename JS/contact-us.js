@@ -13,17 +13,16 @@ document.addEventListener("DOMContentLoaded", function () {
     // set max date on dob to today
     dobInput.max = new Date().toISOString().split("T")[0];
 
-    // -----------------------------
     // EMAIL (STRONG VALIDATION)
-    // -----------------------------
+
     function isValidEmail(value) {
         const pattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         return pattern.test(value);
     }
 
-    // -----------------------------
+    
     // LIVE VALIDATION
-    // -----------------------------
+
     firstName.addEventListener("input", validateFirstName);
     lastName.addEventListener("input", validateLastName);
     email.addEventListener("input", validateEmail);
@@ -37,9 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
         input.addEventListener("change", validateLanguage);
     });
 
-    // -----------------------------
+    
     // VALIDATION FUNCTIONS
-    // -----------------------------
+   
     function validateFirstName() {
         const value = firstName.value.trim();
 
@@ -182,9 +181,9 @@ document.addEventListener("DOMContentLoaded", function () {
         return true;
     }
 
-    // -----------------------------
+   
     // SUBMIT VALIDATION
-    // -----------------------------
+    
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
@@ -236,9 +235,9 @@ document.addEventListener("DOMContentLoaded", function () {
 }
     });
 
-    // -----------------------------
+    
     // ERROR HANDLING
-    // -----------------------------
+    
     function showError(id, message) {
         const el = document.getElementById(id);
         el.textContent = message;

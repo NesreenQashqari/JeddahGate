@@ -71,7 +71,7 @@ app.post('/contact', (req, res) => {
         return res.json({ success: false, message: 'Invalid mobile number' });
     }
     */
-
+   
     // this is the new logic that support +966 and 05 and for each we definded condition to fit each one 
    if (mobile.startsWith('05')) {
     if (mobile.length !== 10) {
@@ -90,7 +90,6 @@ app.post('/contact', (req, res) => {
 } else {
     return res.json({ success: false, message: 'Mobile must start with 05 or +966' });
 }
-
     //check message length
     if (message.length < 10) {
         return res.json({ success: false, message: 'Message must be at least 10 characters' });
