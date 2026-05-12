@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    //validate the first name 
+    //validate the last name 
     function validateLastName() {
         const value = lastName.value.trim();
 
@@ -255,7 +255,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .then(res => res.json())
     .then(data => {
-        const successMsg = document.getElementById('successMessage'); // sucesse
+        const successMsg = document.getElementById('successMessage'); // success
         if (data.success) {
             successMsg.style.display = 'block';
             form.reset();
@@ -301,7 +301,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // the review part 
 
-// grap elements
+// grab elements
 const websiteReviewForm = document.getElementById('websiteReviewForm');
 const websiteReviewText = document.getElementById('websiteReviewText');
 
@@ -350,9 +350,9 @@ websiteReviewForm.addEventListener('submit', function(e) {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData)
         })
-        .then(res => res.json()) //conerting from raw responce to readable js data
+        .then(res => res.json()) //converting from raw responce to readable js data
 
-        //work whit the converted data
+        //work with the converted data
         .then(data => {
             const successMsg = document.getElementById('websiteReviewSuccess');
             if (data.success) {
@@ -362,10 +362,10 @@ websiteReviewForm.addEventListener('submit', function(e) {
                 clearError('websiteReviewTextError');
                 setTimeout(function() { successMsg.style.display = 'none'; }, 4000); // hide message after 4 sec
             } else {
-                alert(data.message); // if serever rejected the data show the server error message 
+                alert(data.message); // if server rejected the data show the server error message 
             }
         })
-        .catch(() => { alert('Could not connect to server. Make sure the server is running.'); }); // connection prplems 
+        .catch(() => { alert('Could not connect to server. Make sure the server is running.'); }); // connection problems 
     }
 });
 
