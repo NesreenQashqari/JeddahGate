@@ -45,19 +45,22 @@ body {
     box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
     
 }
- 
+
+/* PLACE DETAILS */
 .detail-info h2 {
     margin-top: 0;
     margin-bottom: 15px;
     color: rgb(130, 67, 22);
 }
- 
+
+/* DETAIL PARAGRAPHS */
 .detail-info p {
     margin: 5px 0;
     line-height: 1.4;
     color: #333;
 }
- 
+
+/* LABELS IN DETAILS */
 .detail-info span.label {
     font-weight: bold;
     color: #555;
@@ -74,7 +77,8 @@ body {
     border-radius: 10px;
     box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.05);
 }
- 
+
+/* REVIEW FORM HEADING */
 .review-container h2 {
     margin-bottom: 10px;
     text-align: left;
@@ -87,17 +91,20 @@ body {
     flex-direction: row-reverse;
     font-size: 25px;
 }
- 
+
+/* HIDE RADIO BUTTONS */
 .star-rating input {
     display: none;
 }
- 
+
+/* STAR LABEL COLOR */
 .star-rating label {
     color: #ccc;
     cursor: pointer;
     transition: color 0.3s;
 }
- 
+
+/* STAR LABEL COLOR ON HOVER AND WHEN CHECKED */
 .star-rating input:checked ~ label,
 .star-rating label:hover,
 .star-rating label:hover ~ label {
@@ -153,8 +160,7 @@ body {
     background: rgb(200, 190, 148);
 }
 
- 
-
+/* PLACE REVIEWS SECTION */
 .place-reviews-section {
     max-width: 600px;
     margin: 30px auto;
@@ -162,6 +168,7 @@ body {
     text-align: center;
 }
 
+/* PLACE REVIEWS TITLE */
 .place-reviews-section h2 {
     font-family: 'Times New Roman', serif;
     font-size: 28px;
@@ -170,6 +177,7 @@ body {
     letter-spacing: 1px;
 }
 
+/* REVIEWS CAROUSEL (SWIPE BETWEEN REVIEWS) */
 .carousel-outer {
     display: flex;
     align-items: center;
@@ -178,6 +186,7 @@ body {
     margin: 0 auto;
 }
 
+/* CAROUSEL NAVIGATION BUTTONS */
 .carousel-btn {
     background: rgba(232, 228, 203, 0.9);
     border: 1px solid rgba(200, 169, 110, 0.3);
@@ -198,17 +207,20 @@ body {
     background: rgba(86, 65, 39, 0.9);
 }
 
+/* CAROUSEL TRACK (HIDES OVERFLOW) */
 .carousel-track {
     overflow: hidden;
     flex: 1;
     width: 100%;
 }
 
+/* CAROUSEL INNER (HOLDS THE REVIEW CARDS) */
 .carousel-inner {
     display: flex;
     transition: transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/*INDIVIDUAL REVIEW CARD */
 .rev-card {
     padding: 32px 36px;
     height: 160px;
@@ -225,6 +237,7 @@ body {
     backdrop-filter: blur(10px);
 }
 
+/* REVIEW STAR RATING*/
 .rev-stars {
     color: #c8a96e;
     font-size: 18px;
@@ -232,6 +245,7 @@ body {
     margin-bottom: 16px;
 }
 
+/* REVIEW QUOTE */
 .rev-quote {
     font-family: 'Times New Roman', serif;
     font-size: 1.1rem;
@@ -241,6 +255,7 @@ body {
     word-break: break-word;
 }
 
+/* CAROUSEL DOTS TO KEEP TRACK OF CURRENT SLIDE */
 .dots {
     display: flex;
     justify-content: center;
@@ -248,6 +263,7 @@ body {
     margin-top: 20px;
 }
 
+/* EACH INDIVIDUAL DOT */
 .dot {
     width: 6px;
     height: 6px;
@@ -257,22 +273,24 @@ body {
     transition: background 0.3s;
 }
 
+/* ACTIVE DOT COLOR */
 .dot.active {
     background: #c8a96e;
 }
 
-
+/* SCROLLBAR FOR REVIEW CARDS */
 .rev-card::-webkit-scrollbar {
     width: 0.5px;
 }
 
+/* SCROLLBAR THUMB COLOR */
 .rev-card::-webkit-scrollbar-thumb {
     background: rgba(200, 169, 110, 0.5);
     border-radius: 50px;
 }
 
 
-/* RESPONSIVE */
+/* MEDIA QUERIES` */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;

@@ -1,12 +1,4 @@
 
-
-/*so the name of the page be colered when we choose it*/
-
-nav ul li a.active {
-    color:  rgb(73, 42, 7);
-}
-
-
 header {
     display: flex;
     justify-content: center;
@@ -14,6 +6,7 @@ header {
     width: 100%;
 }
 
+/* NAVIGATION BAR */
 nav {
     border: 2px solid transparent;
     border-radius: 15px;
@@ -25,6 +18,7 @@ nav {
     font-size: 27px;
 }
 
+/* NAV LINKS */
 nav ul {
     display: flex;
     gap: 40px;
@@ -35,6 +29,7 @@ nav ul {
     justify-content: center;
 }
 
+/* NAV LINK STYLES */
 nav ul li a {
     text-decoration: none;
     color: rgba(232, 228, 203, 0.792);
@@ -45,12 +40,18 @@ nav ul li a {
     transition: 0.3s;
 }
 
+/* ACTIVE LINK COLOR */
+nav ul li a.active {
+    color:  rgb(73, 42, 7);
+}
+
 nav ul li a:hover {
     color:  rgb(73, 42, 7);
     text-decoration: none !important;
 }
 
-/* ===== MEDIA QUERIES ===== */
+
+/* MEDIA QUERIES */
 
 @media (max-width: 768px) {
     nav {

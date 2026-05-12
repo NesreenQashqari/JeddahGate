@@ -21,35 +21,42 @@ body {
     overflow-x: hidden;
 }
 
+/* CONTACT FORM CONTAINER */
 .container {
     width: 70%;
-    max-width: 800px; /* Prevents stretching too wide */
+    max-width: 800px; 
     background: rgba(232, 228, 203, 0.792); 
     border-radius: 2rem;
     padding: 30px;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
     margin: 40px auto;
-    box-sizing: border-box; /* IMPORTANT: Keeps padding inside the width */
+    box-sizing: border-box; 
 }
 
+/* CONTENT INSIDE THE CONTACT FORM */
 .content {
     display: flex;
     justify-content: space-between;
     gap: 40px;
 }
 
+/*LEFT SIDE OF THE CONTACT FORM*/
 .left-side {
     flex: 1;
 }
+
+/* TOPIC TEXT ON THE LEFT SIDE */
 .left-side .topic-text {
     font-size: 24px;
     margin-bottom: 10px;
 }
 
+/* INPUT BOXES */
 .input-box {
     margin: 10px 0;
 }
 
+/* STYLE FOR ALL INPUTS AND TEXTAREAS */
 .input-box input,
 .input-box textarea {
     width: 100%;
@@ -58,12 +65,16 @@ body {
     border: 1px solid #ccc;
     box-sizing: border-box; 
 }
+
+/* LABELS FOR INPUTS */
 .input-box label {
     display: inline-flex;
     align-items: center;
     gap: 6px;
     margin-right: 16px;
 }
+
+/*RIGHT SIDE OF THE CONTACT FORM (INFO) */
 .right-side {
     width: 30%;
     text-align: center;
@@ -75,7 +86,7 @@ body {
     font-size: larger;
 }
 
-
+/* SUBMIT BUTTON */
 input[type="submit"] {
     background-color: rgb(221, 212, 173);
     color: rgb(130, 67, 22);
@@ -92,6 +103,7 @@ input[type="submit"]:hover {
     color: rgb(130, 67, 22);
 }
 
+/* DETAILS ON RIGHT SIDE */
 .details a {
     text-decoration: none !important;
     color: inherit;
@@ -115,12 +127,14 @@ input[type="submit"]:hover {
     max-width: 800px;
 }
 
+/* REVIEW SECTION HEADING */
 .review-section h2 {
     margin-bottom: 10px;
     color: rgb(74, 53, 21);
     text-align: left;
 }
 
+/* STAR RATING */
 .review-section .star-rating {
     display: flex;
     justify-content: left;
@@ -128,26 +142,29 @@ input[type="submit"]:hover {
     font-size: 25px;
 }
 
+/* HIDE RADIO BUTTONS */
 .review-section .star-rating input {
     display: none;
 }
 
+/* COLOR OF THE STAR LABEL */
 .review-section .star-rating label {
     color: #ccc;
     cursor: pointer;
     transition: color 0.3s;
 }
 
+/* COLOR OF THE STAR LABEL ON HOVER AND WHEN CHECKED */
 .review-section .star-rating input:checked ~ label,
 .review-section .star-rating label:hover,
 .review-section .star-rating label:hover ~ label {
     color: gold;
 }
 
+/* REVIEW TEXTAREA */
 .review-section textarea {
     width: 100%;
     height: 80px;
-   
     font-family: 'Times New Roman', Times, serif;
     margin-top: 10px;
     padding: 10px;
@@ -158,6 +175,7 @@ input[type="submit"]:hover {
     outline: none;
 }
 
+/* SUBMIT BUTTON FOR REVIEW */
 .review-section button {
     background-color: rgb(221, 212, 173);
     color: rgb(130, 67, 22);
@@ -168,7 +186,7 @@ input[type="submit"]:hover {
     cursor: pointer;
     transition: 0.3s;
     margin-top: 10px;
-    display: block; /* trying to stop the  buttun from moving */
+    display: block; 
 
 }
 
@@ -176,7 +194,7 @@ input[type="submit"]:hover {
     background: rgb(200, 190, 148);
 }
 
-
+/* FORMS ROW (CONTACT FORM AND REVIEW FORM) */
 .forms-row {
     display: flex;
     gap: 30px;
@@ -185,6 +203,7 @@ input[type="submit"]:hover {
     justify-content: center;
 }
 
+/* ERROR MESSAGE FOR REVIEW FORM */
 #websiteReviewTextError {
     display: block;
     margin-bottom: 8px;
@@ -195,7 +214,8 @@ input[type="submit"]:hover {
     display: none;
 }
 
-/* --- MEDIA QUERIES --- */
+
+/* MEDIA QUERIES */
 
 @media (max-width: 922px) {
     .container {

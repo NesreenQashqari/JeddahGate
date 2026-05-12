@@ -131,7 +131,7 @@ body {
     cursor: pointer;
 }
 
-/* show overlay only on image hover */
+/* SHOW OVERLAY ONLY ON IMAGE HOVER */
 .card-image:hover .card-overlay {
     opacity: 1;
 }
@@ -145,7 +145,7 @@ body {
     text-decoration: none !important;
 }
 
-/* overlay text */
+/* OVERLAY TEXT */
 .card-overlay span {
     color: white;
     font-size: 1.1rem;
