@@ -2,13 +2,13 @@
 
 > A web platform designed to help locals and tourists explore the landmarks, culture, and cuisine of Jeddah, Saudi Arabia.
 
----
+
 
 ## 📖 Project Description
 
 Jeddah Gate is a multi-page website that serves as a digital guide to the city of Jeddah. It brings together information about the city's most notable destinations, local food, and cultural highlights — all presented through a design inspired by Saudi heritage. The platform also allows visitors to submit reviews and contact the team directly, with all data stored in a MySQL database.
 
----
+
 
 ## ✨ Features
 
@@ -18,7 +18,7 @@ Jeddah Gate is a multi-page website that serves as a digital guide to the city o
 - Multi-page layout with a cultural Saudi aesthetic
 - Fully responsive design
 
----
+
 
 ## 🛠️ Technologies Used
 
@@ -27,7 +27,7 @@ Jeddah Gate is a multi-page website that serves as a digital guide to the city o
 - JavaScript
 - MySQL
 
----
+
 
 ## 📸 Screenshots
 
@@ -35,10 +35,10 @@ Jeddah Gate is a multi-page website that serves as a digital guide to the city o
 
 <img width="1433" height="814" alt="Screenshot 1447-11-27 at 9 02 32 PM (2)" src="https://github.com/user-attachments/assets/8d36c7ff-f96c-4bfa-ae2a-5187c11618ae" />
 
----
+
 
 ## 👥 Team Members
 
-- Rawan Alzahrany
-- Nesreen
-- Shahad
+- Rawan 
+- Nesreen 
+- Shahad 
