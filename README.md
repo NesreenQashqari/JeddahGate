@@ -31,7 +31,12 @@ Jeddah Gate is a multi-page website that serves as a digital guide to the city o
 
 ## 📸 Screenshots
 
-<img width="200" height="100" alt="Screenshot 1447-11-27 at 9 02 00 PM (2)" src="https://github.com/user-attachments/assets/acbfd629-fc37-4857-a13e-6dd8999613a8" /> <img width="200" height="100" alt="Screenshot 1447-11-27 at 9 02 32 PM (2)" src="https://github.com/user-attachments/assets/8d36c7ff-f96c-4bfa-ae2a-5187c11618ae" />
+<img width="300" height="150" alt="1" src="https://github.com/user-attachments/assets/7bc85336-4bb6-4142-8e16-13cab1cb7545" /> <img width="300" height="150" alt="2" src="https://github.com/user-attachments/assets/c1b7348d-3ffb-4910-ada5-45efa4ca1b7c" />
+
+<img width="300" height="150" alt="3" src="https://github.com/user-attachments/assets/a28de540-1f04-4c28-a4d3-a1446a7aef6f" /> <img width="300" height="150" alt="4" src="https://github.com/user-attachments/assets/74bac19f-2d36-4810-a152-ef9606c36988" />
+
+
+
 
 
 
